@@ -39,7 +39,8 @@ interface ButtonProps {
 export default defineComponent({
 	name: 'UButton',
 	props: {
-		type: { // 按钮类型
+		/** 按钮类型 */
+		type: { 
 			type: String as PropType<ButtonTypes>,
 			default: 'default'
 		},
@@ -48,6 +49,7 @@ export default defineComponent({
 			type: String as PropType<ButtonSize>,
 			default: 'medium'
 		},
+		/** 是否设置为不可编辑 */
 		disabled: { // 是否禁用
 			type: Boolean,
 			default: false
