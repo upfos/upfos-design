@@ -1,0 +1,14 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+	"useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/__tests__/**", "**/*.md"],
+  "command": {
+		"publish": {
+			"registry": "https://registry.npmjs.org"
+		}
+	}
+}
