@@ -1,6 +1,6 @@
 {
-  "name": "upfos-button",
-  "version": "1.0.1-alpha.1",
+  "name": "@upfos/button",
+  "version": "1.0.1-alpha.6",
   "description": "> TODO: description",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/upfosdesign/upfos-design/issues"
   },
-  "gitHead": "bd82451b57cc11b9ff1f68ba4661609eed5563c2"
+  "gitHead": "d61b76c33152db86e540d7a21eab73c0322c7292"
 }
