@@ -1,0 +1,74 @@
+@import './variable.scss';
+
+@mixin button-hover($--color-font, $--background-color, $--border-color) {
+  &:hover {
+    color: $--color-font;
+    background-color: $--background-color;
+    border-color: $--border-color;
+  }
+}
+@mixin button-is-plain($--color-font, $--background-color, $--border-color, $--background-color-hover) {
+  &.is-plain {
+    color: $--color-font;
+    background-color: $--background-color;
+    border-color: $--border-color;
+    &:hover {
+      background-color: $--background-color-hover;
+    }
+  }
+}
+
+.u-button {
+  border: 1px solid $--color-border--default;
+  border-radius: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-size: $--font-size--normal;
+  line-height: 1;
+  transition: all ease-in .2s;
+  background-color: $--color--white;
+  color: $--color-font--default;
+  cursor: pointer;
+  @include button-is-plain($--color-font--default, $--color--white, $--color-border--default, $--color--secondary);
+  & + .u-button {
+    margin-left: 10px;
+  }
+  &.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  // size
+  &--small {
+    padding: 5px 16px;
+    font-size: $--font-size--small;
+  }
+  &--medium {
+    padding: 7px 16px;
+    font-size: $--font-size--small;
+  }
+  &--large {
+    padding: 9px 16px;
+    font-size: $--font-size--normal;
+  }
+  &--larger {
+    padding: 11px 16px;
+    font-size: $--font-size--normal;
+  }
+  // type
+  &--primary {
+    color: $--color-font--white;
+    background-color: $--color--primary;
+    border-color: $--color-border--primary;
+    @include button-hover($--color-font--white, $--color--primary-hover, $--color-border--primary);
+    @include button-is-plain($--color-font--primary, $--color--white, $--color-border--primary, $--color--plain-hover);
+  }
+  &--text {
+    color: $--color-font--primary;
+    padding: 0;
+    border: none;
+    &:hover {
+      color: $--color--primary-hover;
+    }
+  }
+  
+}

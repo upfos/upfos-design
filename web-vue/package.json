@@ -2,7 +2,8 @@
   "name": "upfos-design",
   "private": true,
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "lerna": "^4.0.0",
+    "vue": "^3.2.20"
   },
   "workspaces": [
 		"packages/*"
