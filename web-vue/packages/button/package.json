@@ -1,6 +1,6 @@
 {
   "name": "@upfos/button",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1-alpha.5",
   "description": "> TODO: description",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "",
@@ -20,5 +20,5 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "3e86c52c09d02912cb207a28891929d2b5eac6f3"
+  "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399"
 }
