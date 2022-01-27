@@ -1778,11 +1778,6 @@
     "@typescript-eslint/types" "4.33.0"
     eslint-visitor-keys "^2.0.0"
 
-"@upfos/button@^1.0.1-alpha.7":
-  version "1.0.1-alpha.7"
-  resolved "https://registry.yarnpkg.com/@upfos/button/-/button-1.0.1-alpha.7.tgz#96d92da3b73b62998e09010b29661dd7b4e6f822"
-  integrity sha512-aOwA/kzIMRYe6ImTNoWqLU1syI/LSHDFNM4VoKycnooV6k6zzOUlVX4OB/IPbhyTvV+/FVKNA4bGaD1hjZBVpA==
-
 "@vue/compiler-core@3.2.20":
   version "3.2.20"
   resolved "https://registry.npmmirror.com/@vue/compiler-core/download/@vue/compiler-core-3.2.20.tgz?cache=0&sync_timestamp=1633712761777&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40vue%2Fcompiler-core%2Fdownload%2F%40vue%2Fcompiler-core-3.2.20.tgz"
