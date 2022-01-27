@@ -1,6 +1,6 @@
 {
   "name": "@upfos/design",
-  "version": "0.0.1-alpha.3",
+  "version": "0.0.1-alpha.4",
   "description": "> TODO: description",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
@@ -23,5 +23,5 @@
   "bugs": {
     "url": "https://github.com/upfosdesign/upfos-design/issues"
   },
-  "gitHead": "358c2d9c9e01f70b3ff5218a09edc2a6b56aa516"
+  "gitHead": "3e86c52c09d02912cb207a28891929d2b5eac6f3"
 }
