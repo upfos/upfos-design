@@ -4,11 +4,12 @@
   "version": "1.0.0",
   "main": "lib/index.js",
   "license": "MIT",
-	"author": "chrissie",
+  "author": "chrissie",
   "description": "UPFOS DESIGN",
   "workspaces": [
     "packages/*"
   ],
+  "files": ["lib"],
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
@@ -39,6 +40,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@upfos/design": "file:packages/upfos",
     "typescript": "^4.2.3",
     "vue": "^3.0.9"
   },

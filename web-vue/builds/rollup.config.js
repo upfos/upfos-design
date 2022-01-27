@@ -15,7 +15,8 @@ export default inputs.map((name) => {
     input: path.resolve(__dirname, `../packages/${pckName}/index.ts`),
     output: {
       format: "es",
-      file: `lib/${pckName}/index.js`,
+      // file: `lib/${pckName}/index.js`,
+      file:  `packages/${pckName}/lib/index.js`
     },
     plugins: [
       nodeResolve(),
