@@ -1,0 +1,17 @@
+@mixin button-hover($--color-font, $--background-color, $--border-color) {
+  &:hover {
+    color: $--color-font;
+    background-color: $--background-color;
+    border-color: $--border-color;
+  }
+}
+@mixin button-is-plain($--color-font, $--background-color, $--border-color, $--background-color-hover) {
+  &.is-plain {
+    color: $--color-font;
+    background-color: $--background-color;
+    border-color: $--border-color;
+    &:hover {
+      background-color: $--background-color-hover;
+    }
+  }
+}
