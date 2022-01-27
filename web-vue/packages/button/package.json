@@ -18,8 +18,7 @@
     "url": "git+https://github.com/upfosdesign/upfos-design.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "rollup -c"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/upfosdesign/upfos-design/issues"

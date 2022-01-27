@@ -1,1 +1,7 @@
-import{defineComponent as f,reactive as m,openBlock as l,createElementBlock as a,normalizeClass as o,createCommentVNode as u,renderSlot as y}from"vue";var t=f({name:"UButton",props:{type:{type:String,default:"default"},icon:String,size:{type:String,default:"medium"},disabled:{type:Boolean,default:!1},round:{type:Boolean,default:!1},plain:{type:Boolean,default:!1},circle:{type:Boolean,default:!1}},setup(e,{emit:n,slots:i}){return{classNames:m({"u-button--text":e.type==="text","u-button--primary":e.type==="primary","is-disabled":e.disabled,"is-plain":e.plain,"is-circle":e.circle,"is-round":e.round,[`u-button--${e.size}`]:!!e.size}),slots:i,handleClick:s=>{if(e.disabled)return!1;n("click",s)}}}});const p={key:1,class:"u-button__inner"};function b(e,n,i,d,r,s){return l(),a("button",{class:o(["u-button",e.classNames]),onClick:n[0]||(n[0]=(...c)=>e.handleClick&&e.handleClick(...c))},[e.icon?(l(),a("i",{key:0,class:o(["u-button__icon",e.icon])},null,2)):u("",!0),e.slots.default?(l(),a("span",p,[y(e.$slots,"default")])):u("",!0)],2)}t.render=b,t.install=e=>{e.component(t.name,t)};export{t as default};
+'use strict';
+
+module.exports = button;
+
+function button() {
+    // TODO
+}
