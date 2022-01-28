@@ -9,7 +9,9 @@
   "workspaces": [
     "packages/*"
   ],
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@babel/core": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
@@ -40,15 +42,15 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "@upfos/design": "file:packages/upfos",
     "typescript": "^4.2.3",
     "vue": "^3.0.9"
   },
   "scripts": {
+    "serve": "yarn build:theme && yarn build:bundle && yarn website-dev",
     "website-dev": "webpack serve --config ./website/webpack.config.js",
+    "build": "yarn build:components && yarn build:theme",
     "build:theme": "rimraf ./packages/theme-chalk/lib && gulp build --gulpfile packages/theme-chalk/gulpfile.js",
-    "build": "webpack --config builds/webpack.config.js",
-    "build:esm-bundle": "rimraf ./lib && rollup -c ./builds/rollup.config.bundle.js",
-    "build:esm": "rollup -c ./builds/rollup.config.js"
+    "build:bundle": "rimraf ./lib && rollup -c ./builds/rollup.config.bundle.js",
+    "build:components": "rimraf ./packages/**/lib && rollup -c ./builds/rollup.config.js"
   }
 }

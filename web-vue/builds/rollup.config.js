@@ -5,18 +5,17 @@ import path from "path";
 import { getPackagesSync } from "@lerna/project";
 import vue from "rollup-plugin-vue";
 
-// 获取package.json 找到名字 以@upfos 开头的
+// 获取package.json 找到名字 以@upfos(排除theme-chalk包) 开头的
 const inputs = getPackagesSync()
   .map((pck) => pck.name)
-  .filter((name) => name.includes("@upfos"));
+  .filter((name) => name.includes("@upfos") && name !== '@upfos/theme-chalk');
 export default inputs.map((name) => {
-  const pckName = name.split("@upfos")[1]; // button icon
+  const pckName = name.split("@upfos")[1];
   return {
     input: path.resolve(__dirname, `../packages/${pckName}/index.ts`),
     output: {
       format: "es",
-      // file: `lib/${pckName}/index.js`,
-      file:  `packages/${pckName}/lib/index.js`
+      file:  `packages/${pckName}/lib/${pckName}.js`
     },
     plugins: [
       nodeResolve(),
@@ -34,8 +33,8 @@ export default inputs.map((name) => {
       }),
     ],
     external(id) {
-      // 对vue本身 和 自己写的包 都排除掉不打包
-      return /^vue/.test(id) || /^@upfos/.test(id);
+      // 对vue本身、自己写的包 都排除掉不打包
+      return /^vue/.test(id) || /^@upfos/.test(id)
     },
   };
 });

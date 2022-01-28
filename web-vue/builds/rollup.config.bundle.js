@@ -24,7 +24,7 @@ export default {
             }
         })
     ],
-    external(id) { // 排除vue本身
-        return /^vue/.test(id)
+    external(id) { // 排除vue本身 和 theme-chalk
+        return /^vue/.test(id) || /^theme-chalk/.test(id)
     },
 }

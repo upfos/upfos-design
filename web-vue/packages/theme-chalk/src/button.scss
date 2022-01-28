@@ -10,9 +10,9 @@
   line-height: 1;
   transition: all ease-in .2s;
   background-color: $--color--white;
-  color: $--color-font--default;
+  color: $--color--black;
   cursor: pointer;
-  @include button-is-plain($--color-font--default, $--color--white, $--color-border--default, $--color--secondary);
+  @include button-is-plain($--color--black, $--color--white, $--color-border--default, $--color--secondary);
   & + .u-button {
     margin-left: 10px;
   }
@@ -39,14 +39,14 @@
   }
   // type
   &--primary {
-    color: $--color-font--white;
+    color: $--color--white;
     background-color: $--color--primary;
     border-color: $--color-border--primary;
-    @include button-hover($--color-font--white, $--color--primary-hover, $--color-border--primary);
-    @include button-is-plain($--color-font--primary, $--color--white, $--color-border--primary, $--color--plain-hover);
+    @include button-hover($--color--white, $--color--primary-hover, $--color--primary-hover);
+    @include button-is-plain($--color--primary, $--color--white, $--color-border--primary, $--color--plain-hover);
   }
   &--text {
-    color: $--color-font--primary;
+    color: $--color--primary;
     padding: 0;
     border: none;
     &:hover {
