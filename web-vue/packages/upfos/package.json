@@ -1,6 +1,6 @@
 {
   "name": "@upfos/upfos",
-  "version": "0.0.1-alpha.6",
+  "version": "0.0.1-alpha.7",
   "description": "> TODO: description",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
@@ -25,7 +25,7 @@
   },
   "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399",
   "dependencies": {
-    "@upfos/button": "^0.0.1-alpha.6",
-    "@upfos/theme-chalk": "^0.0.1-alpha.6"
+    "@upfos/button": "^0.0.1-alpha.7",
+    "@upfos/theme-chalk": "^0.0.1-alpha.7"
   }
 }
