@@ -1,5 +1,5 @@
 import { App } from "@vue/runtime-core";
-import Button from "./src/button.vue";
+import Button from "./src/index.vue";
 
 Button.install = (app: App): void => {
   app.component(Button.name, Button);

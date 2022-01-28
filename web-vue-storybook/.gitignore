@@ -1,12 +1,6 @@
 dist
 node_modules
 
-.storybook
-stories
-.babelrc.json
-package.json
-yarn.lock
-
 .vscode
 .DS_Store
 .idea
