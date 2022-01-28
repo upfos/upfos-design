@@ -20,5 +20,8 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399"
+  "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399",
+  "dependencies": {
+    "@upfos/theme-chalk": "^0.0.1-alpha.6"
+  }
 }
