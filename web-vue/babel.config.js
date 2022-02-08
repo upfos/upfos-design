@@ -1,21 +1,31 @@
 module.exports = {
-  presets: ["@babel/preset-env", "@babel/preset-typescript"],
-  overrides: [
-    {
-      test: /\.vue$/,
-      plugins: ["@babel/transform-typescript"],
-    },
-  ],
-  env: {
-    utils: {
-      plugins: [
-        [
-          "babel-plugin-modu-resolver",
+  // ATTENTION!!
+  // Preset ordering is reversed, so `@babel/typescript` will called first
+  // Do not put `@babel/typescript` before `@babel/env`, otherwise will cause a compile error
+  // See https://github.com/babel/babel/issues/12066
+  presets: [
+      '@vue/cli-plugin-babel/preset',
+      [
+          '@babel/typescript',
           {
-            root: "upfos",
-          },
-        ],
-      ],
-    },
-  },
-};
+              isTSX: true,
+              allExtensions: true
+          }
+      ]
+  ],
+  plugins: ['@babel/transform-runtime'],
+  env: {
+      utils: {
+          ignore: ['**/*.test.ts', '**/*.spec.ts'],
+          presets: [
+              [
+                  '@babel/env',
+                  {
+                      loose: true,
+                      modules: false
+                  }
+              ]
+          ]
+      }
+  }
+}

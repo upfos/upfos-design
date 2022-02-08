@@ -1,7 +1,7 @@
 dist
 node_modules
 lib
-packages/**/lin
+packages/**/lib
 
 .vscode
 .DS_Store

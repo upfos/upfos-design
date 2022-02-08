@@ -5,13 +5,17 @@
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/button.js",
+  "main": "lib/index.js",
+  "module": "lib/index.module.js",
+  "typings": "typings/upfos-design.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "typings",
+    "README"
   ],
   "repository": {
     "type": "git",

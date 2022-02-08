@@ -1,4 +1,4 @@
-import Button from "@upfos/button";
+import Button from "@upfos/button"
 import { App } from "@vue/runtime-core";
 
 const components = [Button];

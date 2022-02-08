@@ -1,11 +1,11 @@
-# `upfos`
+# `@upfos/design`
 
 > TODO: description
 
 ## Usage
 
 ```
-const upfos = require('upfos');
+const design = require('@upfos/design');
 
 // TODO: DEMONSTRATE API
 ```
