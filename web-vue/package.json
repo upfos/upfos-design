@@ -55,7 +55,7 @@
   },
   "scripts": {
     "build": "yarn clean:lib && NODE_ENV=production rollup -c",
-    "build:theme": "yarn lean:theme && gulp build --gulpfile packages/theme-chalk/gulpfile.js",
+    "build:theme": "yarn clean:theme && gulp build --gulpfile packages/theme-chalk/gulpfile.js",
     "clean:lib": "rm -rf ./packages/**/lib",
     "clean:theme": "rm -rf ./packages/theme-chalk/lib",
     "clean": "lerna clean",
