@@ -2061,11 +2061,6 @@
   dependencies:
     "@types/node" "*"
 
-"@upfos/theme-chalk@^0.0.1-alpha.7":
-  version "0.0.1-alpha.7"
-  resolved "https://registry.yarnpkg.com/@upfos/theme-chalk/-/theme-chalk-0.0.1-alpha.7.tgz#f653a1a9f6ad09d02e67ad6dc4db06dc19e1a627"
-  integrity sha512-QcA/sZRp0OpbkTJOo2l/AN1hXBWI9aKL1zo74kS7LabWsoz/8szQtxBm3vKFMqw+xmMXDG/TXKHn3po+yEGv5A==
-
 "@vitejs/plugin-vue-jsx@^1.1.7":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue-jsx/-/plugin-vue-jsx-1.3.3.tgz#a757f737aeb04dd4ad627239b7abe4680c7c8aa1"
