@@ -1,5 +1,5 @@
 import Button from "@upfos/button"
-import { App } from "@vue/runtime-core";
+import { App } from 'vue'
 
 const components = [Button];
 const install = (app: App): void => {
@@ -11,4 +11,4 @@ const install = (app: App): void => {
 
 export default {
   install,
-};
+}

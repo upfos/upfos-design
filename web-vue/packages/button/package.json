@@ -1,17 +1,13 @@
 {
   "name": "@upfos/button",
   "version": "0.0.1-alpha.9",
-  "description": "> TODO: description",
+  "description": "基于 Vue3.x 的组件库",
   "author": "chrissie <shengjiaoqing@163.com>",
-  "homepage": "",
+  "homepage": "https://github.com/upfosdesign/upfos-design#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
-  "typings": "typings/upfos-design.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "__tests__"
-  },
+  "typings": "typings/upfos.d.ts",
   "files": [
     "lib",
     "typings",
@@ -21,17 +17,23 @@
     "type": "git",
     "url": "git+https://github.com/upfosdesign/upfos-design.git"
   },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
-  },
   "bugs": {
     "url": "https://github.com/upfosdesign/upfos-design/issues"
+  },
+  "keywords": [
+    "vue3",
+    "components",
+    "lerna",
+    "rollup"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "vue": "^3.2.8"
   },
-  "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399",
-  "dependencies": {
-    "@upfos/theme-chalk": "^0.0.1-alpha.8"
-  }
+  "engines": {
+    "node": ">=12"
+  },
+  "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399"
 }

@@ -51,13 +51,13 @@ const getPlugins = () => {
 
 module.exports = fs
     .readdirSync(root)
-    // 过滤，只保留文件夹(除theme-chalk文件夹外)
+    // 过滤，只保留文件夹
     .filter(item => fs.statSync(path.resolve(root, item)).isDirectory() && item !== 'theme-chalk')
     // 为每一个文件夹创建对应的配置
     .map(item => {
         const pkg = require(path.resolve(root, item, 'package.json'))
         return {
-            input: path.resolve(root, item, 'src/main.ts'),
+            input: path.resolve(root, item, 'index.ts'),
             output: [
                 {
                     name: 'index',

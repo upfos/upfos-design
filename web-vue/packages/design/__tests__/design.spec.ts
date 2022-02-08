@@ -2,6 +2,6 @@
 
 const design = require('..');
 
-describe('@upfos/design', () => {
+describe('design', () => {
     it('needs tests');
 });

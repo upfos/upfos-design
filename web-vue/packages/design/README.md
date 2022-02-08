@@ -1,11 +1,30 @@
-# `@upfos/design`
+# @upfos/design
 
-> TODO: description
+## Install
+
+```bash
+npm i @upfos/design
+# or
+yarn add @upfos/design
+```
 
 ## Usage
 
-```
-const design = require('@upfos/design');
+```vue
+<template>
+ <u-design/>
+</template>
 
-// TODO: DEMONSTRATE API
+<script lang="ts">
+import { defineComponent, toRefs } from 'vue'
+import UDesign from '@upfos/design'
+
+export default defineComponent({
+  components: { UDesign },
+  setup() {}
+})
+</script>
 ```
+
+## Docs
+
