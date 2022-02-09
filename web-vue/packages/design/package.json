@@ -36,6 +36,7 @@
     "node": ">=12"
   },
   "dependencies": {
+    "@upfos/button": "^0.0.1-alpha.11",
     "@upfos/theme-chalk": "^0.0.1-alpha.8"
   }
 }
