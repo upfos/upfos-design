@@ -1,7 +1,7 @@
 import { App } from 'vue'
-import Button from '@upfos/button'
+import Button, { ButtonGroup } from '@upfos/button'
 
-const components = [ Button ];
+const components = [Button, ButtonGroup];
 const install = (app: App): void => {
   components.forEach((component) => {
     //注册组件

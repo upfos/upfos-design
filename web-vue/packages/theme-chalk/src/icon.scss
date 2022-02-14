@@ -1,0 +1,687 @@
+@font-face {
+  font-family: "upfos-icons";
+  src: url('./fonts/iconfont.woff') format('woff'),
+       url('./fonts/iconfont.ttf') format('truetype');
+}
+
+.icon {
+  font-family: "upfos-icons" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1;
+  color: #777777;
+}
+
+.icon--right {
+  margin-left: 8px;
+}
+
+.overall_input_confirm:before {
+  content: "\e770";
+}
+
+.overall_input_edit:before {
+  content: "\e771";
+}
+
+.overall_input_delect:before {
+  content: "\e772";
+}
+
+.overall_graph_operationlog:before {
+  content: "\e76e";
+}
+
+.overall_graph_systemlog:before {
+  content: "\e76f";
+}
+
+.report_card_avgdailyorder:before {
+  content: "\e73a";
+}
+
+.report_card_inventoryqty:before {
+  content: "\e73c";
+}
+
+.nav_memberinfo:before {
+  content: "\e703";
+}
+
+.nav_membermanage:before {
+  content: "\e704";
+}
+
+.nav_wms:before {
+  content: "\e707";
+}
+
+.nav_inventorymanage:before {
+  content: "\e708";
+}
+
+.nav_membercare:before {
+  content: "\e70a";
+}
+
+.nav_inventorylog:before {
+  content: "\e70e";
+}
+
+.nav_basicconfig:before {
+  content: "\e70f";
+}
+
+.nav_inventorysearch:before {
+  content: "\e712";
+}
+
+.show_task_inexecution1:before {
+  content: "\e76d";
+}
+
+.overall_show_notice:before {
+  content: "\e76c";
+}
+
+.homepage_graph_gotoauthorize:before {
+  content: "\e76b";
+}
+
+.register_hide:before {
+  content: "\e76a";
+}
+
+.homepage_card_details_normal:before {
+  content: "\e767";
+}
+
+.homepage_card_sales_disabled:before {
+  content: "\e768";
+}
+
+.homepage_card_tradingvolume_disabled:before {
+  content: "\e769";
+}
+
+.product_inform_onsalelink:before {
+  content: "\e75c";
+}
+
+.product_inform_liveproductlink:before {
+  content: "\e75d";
+}
+
+.product_graph_autoracking_visited:before {
+  content: "\e75e";
+}
+
+.product_graph_autoshelfoff_visited:before {
+  content: "\e75f";
+}
+
+.order_show_scan_visited:before {
+  content: "\e760";
+}
+
+.product_graph_syncinventory_visited:before {
+  content: "\e761";
+}
+
+.order_show_pickingorder_visited:before {
+  content: "\e762";
+}
+
+.order_inform_skip:before {
+  content: "\e763";
+}
+
+.order_show_logisticsorder_visited:before {
+  content: "\e764";
+}
+
+.order_show_dispatchorder_visited:before {
+  content: "\e765";
+}
+
+.order_inform_edit:before {
+  content: "\e766";
+}
+
+.show_shop_unauthorized:before {
+  content: "\e749";
+}
+
+.button_top_usercenter:before {
+  content: "\e74a";
+}
+
+.show_shop_authorized:before {
+  content: "\e74b";
+}
+
+.button_top_store:before {
+  content: "\e74c";
+}
+
+.button_top_signout:before {
+  content: "\e74d";
+}
+
+.button_top_retractscreen:before {
+  content: "\e74e";
+}
+
+.button_top_switchlanguage:before {
+  content: "\e74f";
+}
+
+.graph_task_download_default:before {
+  content: "\e750";
+}
+
+.button_top_startamanage:before {
+  content: "\e751";
+}
+
+.button_top_tenantcode:before {
+  content: "\e752";
+}
+
+.button_top_expand:before {
+  content: "\e753";
+}
+
+.button_top_companyname:before {
+  content: "\e754";
+}
+
+.button_top_tenantcountry:before {
+  content: "\e755";
+}
+
+.button_top_messagecenter:before {
+  content: "\e756";
+}
+
+.button_top_fullscreen:before {
+  content: "\e757";
+}
+
+.button_top_globalconfig:before {
+  content: "\e758";
+}
+
+.button_top_changepassword:before {
+  content: "\e759";
+}
+
+.button_top_set:before {
+  content: "\e75a";
+}
+
+.button_top_currenttenant:before {
+  content: "\e75b";
+}
+
+.show_task_completed:before {
+  content: "\e746";
+}
+
+.show_task_inexecution:before {
+  content: "\e747";
+}
+
+.graph_task_view_default:before {
+  content: "\e748";
+}
+
+.register_mac:before {
+  content: "\e743";
+}
+
+.register_windows:before {
+  content: "\e744";
+}
+
+.register_upfosapp:before {
+  content: "\e745";
+}
+
+.register_input_emailorloginname:before {
+  content: "\e73d";
+}
+
+.register_input_invitationcode:before {
+  content: "\e73e";
+}
+
+.register_input_inputpassword:before {
+  content: "\e73f";
+}
+
+.register_input_companyorpersonalname:before {
+  content: "\e740";
+}
+
+.register_input_verificationcode:before {
+  content: "\e741";
+}
+
+.register_input_areacode:before {
+  content: "\e742";
+}
+
+.a-report_card_todayeffectivesales2:before {
+  content: "\e730";
+}
+
+.a-report_card_qtyintransit2x:before {
+  content: "\e731";
+}
+
+.report_card_todayordervolume:before {
+  content: "\e732";
+}
+
+.report_card_storetransactionrank:before {
+  content: "\e733";
+}
+
+.report_card_todayeffectivesales:before {
+  content: "\e734";
+}
+
+.report_card_salesperbuyer:before {
+  content: "\e735";
+}
+
+.report_card_numberofcategorie:before {
+  content: "\e736";
+}
+
+.report_card_inventoryavailabletosell:before {
+  content: "\e737";
+}
+
+.report_card_priceperunit:before {
+  content: "\e738";
+}
+
+.report_card_numberofcombos:before {
+  content: "\e739";
+}
+
+.a-report_card_numberofsku2x:before {
+  content: "\e73b";
+}
+
+.button_intelligentpurchase:before {
+  content: "\e71a";
+}
+
+.button_releaseagain:before {
+  content: "\e724";
+}
+
+.panel_view:before {
+  content: "\e6ca";
+}
+
+.panel_upload:before {
+  content: "\e6cc";
+}
+
+.panel_review:before {
+  content: "\e6ce";
+}
+
+.panel_upfosdeliveryonly:before {
+  content: "\e6cf";
+}
+
+.panel_sendnow:before {
+  content: "\e6d0";
+}
+
+.panel_viewdelivery:before {
+  content: "\e6d1";
+}
+
+.panel_replace:before {
+  content: "\e6d2";
+}
+
+.panel_refuse:before {
+  content: "\e6d3";
+}
+
+.panel_resync:before {
+  content: "\e6d4";
+}
+
+.panel_more:before {
+  content: "\e6d5";
+}
+
+.panel_resetpassword:before {
+  content: "\e6d6";
+}
+
+.panel_outbound:before {
+  content: "\e6d7";
+}
+
+.panel_fieldaccess:before {
+  content: "\e6d8";
+}
+
+.panel_inbound:before {
+  content: "\e6d9";
+}
+
+.panel_published:before {
+  content: "\e6da";
+}
+
+.panel_inventorysynclog:before {
+  content: "\e6db";
+}
+
+.panel_matchexpress:before {
+  content: "\e6dc";
+}
+
+.panel_featuresaccess:before {
+  content: "\e6dd";
+}
+
+.panel_editproduct:before {
+  content: "\e6de";
+}
+
+.panel_disable:before {
+  content: "\e6df";
+}
+
+.panel_deliveryauth:before {
+  content: "\e6e0";
+}
+
+.panel_edit:before {
+  content: "\e6e1";
+}
+
+.panel_delete:before {
+  content: "\e6e2";
+}
+
+.panel_dock:before {
+  content: "\e6e3";
+}
+
+.panel_dataaccess:before {
+  content: "\e6e4";
+}
+
+.panel_confirmrefund:before {
+  content: "\e6e5";
+}
+
+.panel_default:before {
+  content: "\e6e6";
+}
+
+.panel_connect:before {
+  content: "\e6e7";
+}
+
+.panel_canceldefault:before {
+  content: "\e6e8";
+}
+
+.panel_createreturneorxchange:before {
+  content: "\e6e9";
+}
+
+.panel_add:before {
+  content: "\e6ea";
+}
+
+.panel_binding:before {
+  content: "\e6eb";
+}
+
+.panel_copy:before {
+  content: "\e6ec";
+}
+
+.nav_systemproduct:before {
+  content: "\e6ed";
+}
+
+.nav_useranalysis:before {
+  content: "\e6ee";
+}
+
+.nav_yongyounc:before {
+  content: "\e6ef";
+}
+
+.nav_reportanalysis:before {
+  content: "\e6f0";
+}
+
+.nav_realtime:before {
+  content: "\e6f1";
+}
+
+.panel_createrefundorder:before {
+  content: "\e6f2";
+}
+
+.nav_salespromotion:before {
+  content: "\e6f3";
+}
+
+.nav_salesanalysis:before {
+  content: "\e6f4";
+}
+
+.nav_product_normal:before {
+  content: "\e6f5";
+}
+
+.panel_agreerefund:before {
+  content: "\e6f6";
+}
+
+.panel_acquireorderno:before {
+  content: "\e6f7";
+}
+
+.nav_oms:before {
+  content: "\e6f8";
+}
+
+.nav_productanalysis:before {
+  content: "\e6f9";
+}
+
+.nav_orderquery:before {
+  content: "\e6fa";
+}
+
+.nav_platformproduct:before {
+  content: "\e6fb";
+}
+
+.nav_marketing_normal:before {
+  content: "\e6fc";
+}
+
+.nav_inventory_normal:before {
+  content: "\e6fd";
+}
+
+.nav_order_normal:before {
+  content: "\e6fe";
+}
+
+.nav_ordermanage:before {
+  content: "\e6ff";
+}
+
+.nav_inventoryanalysis:before {
+  content: "\e700";
+}
+
+.nav_form_normal:before {
+  content: "\e701";
+}
+
+.nav_docking_normal:before {
+  content: "\e702";
+}
+
+.nav_kthreecloud:before {
+  content: "\e705";
+}
+
+.nav_chat_normal:before {
+  content: "\e706";
+}
+
+.button_weightratio:before {
+  content: "\e709";
+}
+
+.nav_crm_normal:before {
+  content: "\e70b";
+}
+
+.button_wavegenerate:before {
+  content: "\e70c";
+}
+
+.button_waveprint:before {
+  content: "\e70d";
+}
+
+.button_terminate:before {
+  content: "\e710";
+}
+
+.button_timeoutreminder:before {
+  content: "\e711";
+}
+
+.button_spuoperate:before {
+  content: "\e713";
+}
+
+.button_syncinventory:before {
+  content: "\e714";
+}
+
+.button_split:before {
+  content: "\e715";
+}
+
+.button_skuoperate:before {
+  content: "\e716";
+}
+
+.button_sync:before {
+  content: "\e717";
+}
+
+.button_systemset:before {
+  content: "\e718";
+}
+
+.button_review:before {
+  content: "\e719";
+}
+
+.button_print:before {
+  content: "\e71b";
+}
+
+.button_multistorescopy:before {
+  content: "\e71c";
+}
+
+.button_more:before {
+  content: "\e71d";
+}
+
+.button_publishproduct:before {
+  content: "\e71e";
+}
+
+.button_mass:before {
+  content: "\e71f";
+}
+
+.button_live:before {
+  content: "\e720";
+}
+
+.button_offshelf:before {
+  content: "\e721";
+}
+
+.button_importorexport:before {
+  content: "\e722";
+}
+
+.button_manualsync:before {
+  content: "\e723";
+}
+
+.button_handoverfinish:before {
+  content: "\e725";
+}
+
+.button_import:before {
+  content: "\e726";
+}
+
+.button_delete:before {
+  content: "\e727";
+}
+
+.button_cancel:before {
+  content: "\e728";
+}
+
+.button_copy:before {
+  content: "\e729";
+}
+
+.button_add:before {
+  content: "\e72a";
+}
+
+.button_export:before {
+  content: "\e72b";
+}
+
+.button_generatebarcode:before {
+  content: "\e72c";
+}
+
+.button_createsystemsku:before {
+  content: "\e72d";
+}
+
+.button_config:before {
+  content: "\e72e";
+}
+
+.button_abnormalorder:before {
+  content: "\e72f";
+}
+

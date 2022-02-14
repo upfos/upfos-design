@@ -1,57 +1,184 @@
 @import "./common/var.scss";
-@import "./mixins/mixin.scss";
+@import "./mixins/button.scss";
 
 .u-button {
-  border: 1px solid $--color-border--default;
   border-radius: 4px;
-  display: inline-block;
+  display: inline-flex;
   box-sizing: border-box;
-  font-size: $--font-size--normal;
+  font-size: $--font-size--small;
   line-height: 1;
+  padding: 8px 16px;
   transition: all ease-in .2s;
-  background-color: $--color--white;
-  color: $--color--black;
   cursor: pointer;
-  @include button-is-plain($--color--black, $--color--white, $--color-border--default, $--color--secondary);
-  & + .u-button {
+  border: 1px solid;
+  @include button-color($--color--primary-text, $--color--base-border, $--color--base-white);
+  @include button-color-hover($--color--base-border, $--color--base-gray);
+
+  &.is-disabled {
+    @include button-color($--color--secondary-text, $--color--base-border, $--color--light-gray);
+  }
+
+  &+.u-button {
     margin-left: 10px;
   }
+
   &.is-disabled {
-    opacity: 0.5;
     cursor: not-allowed;
   }
-  // size
-  &--small {
-    padding: 5px 16px;
-    font-size: $--font-size--small;
-  }
-  &--medium {
-    padding: 7px 16px;
-    font-size: $--font-size--small;
-  }
-  &--large {
-    padding: 9px 16px;
-    font-size: $--font-size--normal;
-  }
-  &--larger {
-    padding: 11px 16px;
-    font-size: $--font-size--normal;
-  }
-  // type
-  &--primary {
-    color: $--color--white;
-    background-color: $--color--primary;
-    border-color: $--color-border--primary;
-    @include button-hover($--color--white, $--color--primary-hover, $--color--primary-hover);
-    @include button-is-plain($--color--primary, $--color--white, $--color-border--primary, $--color--plain-hover);
-  }
-  &--text {
-    color: $--color--primary;
-    padding: 0;
-    border: none;
-    &:hover {
-      color: $--color--primary-hover;
+
+  .icon,
+  .loading-spinner {
+    &+span {
+      margin-left: 8px;
     }
   }
-  
+
+  &.is-round {
+    border-radius: 14px;
+  }
+
+  &.is-circle {
+    border-radius: 50%;
+  }
+
+  &.is-loading {
+    vertical-align: bottom;
+  }
+
+  &.is-long {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: center;
+  }
+
+  // size
+  &--small {
+    @include button-size(5px);
+  }
+
+  &--medium {
+    @include button-size(7px);
+  }
+
+  &--large {
+    font-size: $--font-size--normal;
+    @include button-size(8px);
+  }
+
+  &--larger {
+    font-size: $--font-size--normal;
+    @include button-size(10px);
+  }
+
+  &--primary {
+    @include button-color($--color--base-white, $--color--primary, $--color--primary);
+    @include button-color-hover($--color--primary-hover, $--color--primary-hover);
+
+    &.is-disabled {
+      @include button-color($--color--secondary-text, $--color--base-border, $--color--light-gray);
+    }
+
+    .icon {
+      color: $--color--base-white;
+    }
+
+    .loading-spinner .circular .path {
+      stroke: $--color--base-white;
+    }
+  }
+
+  &--outlined {
+    @include button-color($--color--primary, $--color--primary, $--color--base-white);
+    @include button-color-hover($--color--primary, $--color--outline-hover);
+
+    &.is-disabled {
+      @include button-color($--color--primary-hover, $--color--primary-hover, $--color--base-white);
+    }
+
+    .icon {
+      color: $--color--primary;
+    }
+  }
+
+  &--text {
+    @include button-color($--color--primary, transparent, transparent);
+    @include button-color-hover(transparent, $--color--light-gray);
+
+    &.is-disabled {
+      @include button-color($--color--primary-hover, transparent, transparent);
+    }
+
+    .icon {
+      color: $--color--primary;
+    }
+  }
+}
+
+// button-group
+.u-button-group {
+  display: inline-flex;
+
+  &+.u-button-group {
+    margin-left: 10px;
+  }
+
+  .u-button {
+    border-radius: 0;
+
+    &+.u-button {
+      margin-left: 0;
+      border-left: none;
+    }
+
+    &:first-child {
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    &.is-active,
+    &:hover {
+      color: $--color--primary;
+      background-color: $--color--outline-hover;
+    }
+
+    &--primary {
+
+      &.is-active,
+      &:hover {
+        background-color: $--color--primary-hover;
+        border-color: $--color--primary-hover;
+        color: $--color--base-white;
+      }
+
+      &+.u-button {
+        border-left: 1px solid $--color--base-white;
+      }
+    }
+  }
+
+  &.is-divided {
+    .u-button {
+      border-left: none;
+      position: relative;
+
+      &+.u-button {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 1px;
+          top: 5px;
+          bottom: 5px;
+          left: 0;
+          background: $--color--base-white;
+        }
+      }
+    }
+  }
 }

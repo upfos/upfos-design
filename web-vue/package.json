@@ -72,6 +72,6 @@
     "clean:theme": "rm -rf ./packages/theme-chalk/lib",
     "release": "standard-version",
     "deploy": "yarn build && lerna publish",
-    "plop": "yarn plop"
+    "plop": "plop"
   }
 }

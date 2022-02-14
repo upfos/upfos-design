@@ -1,19 +1,21 @@
-/* Color
--------------------------- */
-$--color--white: #FFFFFF !default;
-$--color--black: #2C2C2C !default;
-$--color--default: #DBDBDB !default;
-$--color--primary: #EF5230 !default;
-$--color--primary-hover: #F3826A !default;
-$--color--secondary: #EDEFF3 !default;
-$--color--plain-hover: #FFF2EF !default;
-
-/* Border Color
--------------------------- */
-$--color-border--default: #DBDBDB !default;
-$--color-border--primary: #EF5230 !default;
-
-/* Font Size
--------------------------- */
+/* Font Size -------------------------- */
 $--font-size--small: 12px !default;
 $--font-size--normal: 14px !default;
+
+/* Main Color -------------------------- */
+$--color--primary: #EF5230 !default;
+$--color--primary-hover: #F3826A !default;
+$--color--outline-hover: #FFF2EF !default;
+/* Secondary Color -------------------------- */
+
+/* Neutral Color -------------------------- */
+// Background Color
+$--color--base-black: #2C2C2C !default;
+$--color--base-white: #FFFFFF !default;
+$--color--base-gray: #EDEFF3 !default;
+$--color--light-gray: #F5F7FA !default;
+// Text Color
+$--color--primary-text: #2C2C2C !default;
+$--color--secondary-text: #919398 !default;
+// Border Color
+$--color--base-border: #DDDFE5 !default;
