@@ -1,0 +1,266 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { action } from "@storybook/addon-actions";
+import { reactive } from "vue";
+import UButton from "@web-vue/packages/button/src/index.vue";
+import UButtonGroup from "@web-vue/packages/button/src/button-group.vue";
+import "@web-vue/packages/theme-chalk/src/index.scss";
+
+<Meta
+  title="UPFOS DESIGN/Basic 基础组件/Button 按钮"
+  component={UButton}
+  argTypes={{
+    ...argsType
+  }}
+/>
+
+<style>{`
+  .u-row + .u-row {
+    margin-top: 10px;
+  }
+  .wrapper {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #DDDFE5;
+  }
+  .wrapper .u-button + .u-button {
+    margin-top: 10px;
+  }
+  table {
+    width: 100%;
+  }
+`}</style>
+
+# Button 按钮
+常用的操作按钮
+##
+#
+
+### 基本用法
+按钮分为 `primary` - **主要按钮**、`secondary` - **次级按钮（默认）**、`outlined` - **辅助按钮**、`text` - **文本按钮** 四种类型
+
+export const BaseTemplate = `
+<u-button type="primary">主要按钮</u-button>
+<u-button>次级按钮</u-button>
+<u-button type="outlined">辅助按钮</u-button>
+<u-button type="text">文本按钮</u-button>
+`;
+
+export const Base = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: BaseTemplate,
+});
+
+<Canvas mdxSource={BaseTemplate}>
+  <Story name="基本用法">{Base.bind({})}</Story>
+</Canvas>
+
+### 图标按钮
+可以在基本按钮中嵌入`icon`, 形成图标按钮。带图标的按钮可增强辨识度（有文字）或节省空间（无文字）
+
+export const IconTemplate = `
+<u-button type="primary" icon="button_config">设置</u-button>
+<u-button icon="button_print">打印</u-button>
+<u-button>下载<i class="icon button_import icon--right"></i></u-button>
+<u-button icon="button_delete" icon-color="#D0021C"></u-button>
+<u-button type="text" icon="button_print">打印</u-button>
+`;
+
+export const Icon = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: IconTemplate,
+});
+
+<Canvas mdxSource={IconTemplate}>
+  <Story name="图标按钮">{Icon.bind({})}</Story>
+</Canvas>
+
+### 按钮形状
+按钮分为`round` - **全圆角** , `square` - **长方形 (默认)**, `circle` - **圆形** 三种形状
+
+export const ShapeTemplate = `
+<u-button type="outlined" icon="button_timeoutreminder" round>超时提醒</u-button>
+<u-button icon="button_print">打印</u-button>
+<u-button icon="button_delete" icon-color="#D0021C"></u-button>
+<u-button type="primary" circle icon="button_add"></u-button>
+`;
+
+export const Shape = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: ShapeTemplate,
+});
+
+<Canvas mdxSource={ShapeTemplate}>
+  <Story name="按钮形状">{Shape.bind({})}</Story>
+</Canvas>
+
+
+
+### 按钮尺寸
+按钮分为`small`、`medium`、`large`、`larger` 四种尺寸。高度分别为：`24px`、`28px`、`32px`、`36px`。推荐（默认）尺寸`medium`。可在不同场景及不同业务需求选择适合尺寸。
+
+export const SizeTemplate = `
+<u-button size="small" type="primary">小按钮</u-button>
+<u-button size="medium" type="primary">中按钮</u-button>
+<u-button size="large" type="primary">大按钮</u-button>
+<u-button size="larger" type="primary">特大按钮</u-button>
+`;
+
+export const Size = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: SizeTemplate,
+});
+
+<Canvas mdxSource={SizeTemplate}>
+  <Story name="按钮尺寸">{Size.bind({})}</Story>
+</Canvas>
+
+### 按钮状态
+按钮分为`normal` - **正常（默认）**、`disabled` - **禁用**、`loading` - **加载中** 三种状态, 处于加载中状态的按钮不会触发点击事件
+
+export const StatusTemplate = `
+<div class="u-row">
+  <u-button type="primary">主要按钮</u-button>
+  <u-button type="primary" disabled>主要按钮</u-button>
+  <u-button type="primary" loading>主要按钮</u-button>
+</div>
+<div class="u-row">
+  <u-button>次级按钮</u-button>
+  <u-button disabled>次级按钮</u-button>
+  <u-button loading>次级按钮</u-button>
+</div>
+<div class="u-row">
+  <u-button type="outlined">辅助按钮</u-button>
+  <u-button type="outlined" disabled>辅助按钮</u-button>
+  <u-button type="outlined" loading>辅助按钮</u-button>
+</div>
+<div class="u-row">
+  <u-button type="text">文本按钮</u-button>
+  <u-button type="text" disabled>文本按钮</u-button>
+  <u-button type="text" loading>文本按钮</u-button>
+</div>
+`;
+
+export const Status = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: StatusTemplate,
+});
+
+<Canvas mdxSource={StatusTemplate}>
+  <Story name="按钮状态">{Status.bind({})}</Story>
+</Canvas>
+
+### 组合按钮
+当存在同级多项操作时，以组合按钮的方式出现,通过设置`divided`属性来显示分隔符
+
+export const GroupTemplate = `
+<u-button-group>
+  <u-button active>组合按钮</u-button>
+  <u-button>组合按钮</u-button>
+  <u-button>组合按钮</u-button>
+</u-button-group>
+<u-button-group divided>
+  <u-button type="primary" icon="button_copy"></u-button>
+  <u-button type="primary" icon="button_print"></u-button>
+  <u-button type="primary" icon="button_review" active></u-button>
+</u-button-group>
+`
+
+export const Group = (args) => ({
+  components: { UButton, UButtonGroup },
+  props: Object.keys(args),
+  template: GroupTemplate,
+});
+
+<Canvas mdxSource={GroupTemplate}>
+  <Story name="组合按钮">{Group.bind({})}</Story>
+</Canvas>
+
+
+### 长按钮
+通过设置`long`属性，使按钮的宽度跟随容器的宽度。
+
+export const LongTemplate = `
+<div class="wrapper">
+  <u-button type="primary" long>长按钮</u-button>
+  <u-button long>长按钮</u-button>
+  <u-button type="outlined" long>长按钮</u-button>
+  <u-button type="text" long>长按钮</u-button>
+</div>
+`
+
+export const Long = (args) => ({
+  components: { UButton },
+  props: Object.keys(args),
+  template: LongTemplate,
+});
+
+<Canvas mdxSource={LongTemplate}>
+  <Story name="长按钮">{Long.bind({})}</Story>
+</Canvas>
+
+
+<!-- ### 参数文档 -->
+
+export const argsType = {
+  size: {
+    table: {
+      type: {
+        summary: "string",
+      }
+    },
+    options: ['small', 'medium', 'large', 'larger'],
+  },
+  type: {
+    table: {
+      type: {
+        summary: "string",
+      },
+    },
+    options: ['primary', 'secondary', 'outlined', 'text'],
+  },
+};
+
+<!--<ArgsTable story="基本用法" /> -->
+
+###  Button 属性
+
+|属性|说明|类型|可选值|默认值|
+|:---:|:---:|:---:|:---:|:---:|
+|size|尺寸|string|small / medium / large / larger|medium|
+|type|类型|string|primary / secondary / outlined / text|secondary|
+|round|是否为圆角按钮|boolean|—|false|
+|circle|是否圆形按钮|boolean|—|false|
+|disabled|是否禁用状态|boolean|—|false|
+|loading|是否加载中状态|boolean|—|false|
+|long|按钮的宽度是否随容器自适应|boolean|—|false|
+|icon|图标类名|string|—|-|
+|iconColor|图标颜色|string|—|-|
+|active|按钮激活状态（仅在按钮组中有效）|boolean|—|false|
+
+### Button 插槽
+
+|插槽名|说明
+|:---:|:---:|
+|—|自定义默认内容|
+
+### Button 事件
+
+|事件名|描述|参数|
+|:---:|:---:|:---:|
+|click|点击按钮时触发|event: `Event`|
+
+### Button Group 属性
+
+|属性|说明|类型|可选值|默认值|
+|:---:|:---:|:---:|:---:|:---:|
+|divided|是否显示分隔符|boolean|-|false|
+
+### Button Group 插槽
+|插槽名|说明|子标签|
+|:---:|:---:|:---:|
+|-|自定义按钮组内容|Button|

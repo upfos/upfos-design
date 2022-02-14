@@ -1,0 +1,149 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { action } from "@storybook/addon-actions";
+import { reactive } from "vue";
+
+<Meta title="Color" />
+
+<style>{`
+  .box {
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 114px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    line-height: 1;
+  }
+  .value {
+    font-size: 12px;
+    line-height: 24px;
+    opacity: .69;
+  }
+  .is--primary {
+    background-color: #EF5230;
+    width: 33%;
+  }
+  .sub-box {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    line-height: 40px;
+    text-align: center;
+  }
+  .sub-item {
+    flex: 1;
+    font-size: 12px;
+  }
+  .sub-item:first-child {
+    border-bottom-left-radius: 4px;
+  }
+  .sub-item:last-child {
+    border-bottom-right-radius: 4px;
+  }
+  .primary--hover {
+    background: #F3826A;
+  }
+  .outline--hover {
+    background: #FFF2EF;
+    color: #2C2C2C;
+  }
+  .box-wrap {
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .box-wrap + .box-wrap {
+    padding-left: 10px;
+  }
+  .box.box-other {
+    height: 78px;
+  }
+  .box-other + .box-other {
+    margin-top: 10px;
+  }
+  .is--primary-text {
+    background: #2C2C2C;
+  }
+  .is--secondary-text {
+    background: #919398;
+  }
+  .is--base-black {
+    background: #2C2C2C;
+  }
+  .is--base-white {
+    background: #FFFFFF;
+    border: 1px solid #DDDFE5;
+    color: #2C2C2C;
+  }
+  .is--base-gray {
+    background: #EDEFF3;
+    color: #2C2C2C;
+  }
+  .is--light-gray {
+    background: #F5F7FA;
+    color: #2C2C2C;
+  }
+  .is--base-border {
+    background: #DDDFE5;
+    color: #2C2C2C;
+  }
+`}</style>
+
+# Color 色彩
+为了避免视觉传达差异，使用一套特定的调色板来规定颜色
+##
+#
+### 主色
+
+<div class="box is--primary">
+  Brand Color
+  <div class="value">#EF5230</div>
+  <div class="sub-box">
+    <span class="sub-item primary--hover">#F3826A</span>
+    <span class="sub-item outline--hover">#FFF2EF</span>
+  </div>
+</div>
+
+### 辅助色
+除了主色外的场景色，需要在不同的场景中使用（例如危险色表示危险的操作）。
+
+### 中性色
+中性色用于文本、背景和边框颜色。通过运用不同的中性色，来表现层次结构。
+<div class="box-wrap">
+  <div class="box box-other is--primary-text">
+    主要文字
+    <div class="value">#2C2C2C</div>
+  </div>
+  <div class="box box-other is--secondary-text">
+    次要文字
+    <div class="value">#919398</div>
+  </div>
+</div>
+<div class="box-wrap">
+  <div class="box box-other is--base-black">
+    基础黑色
+    <div class="value">#2C2C2C</div>
+  </div>
+  <div class="box box-other is--base-white">
+    基础白色
+    <div class="value">#FFFFFF</div>
+  </div>
+  <div class="box box-other is--base-gray">
+    基础灰色
+    <div class="value">#EDEFF3</div>
+  </div>
+  <div class="box box-other is--light-gray">
+    一级灰色
+    <div class="value">#F5F7FA</div>
+  </div>
+</div>
+<div class="box-wrap">
+  <div class="box box-other is--base-border">
+    一级边框
+    <div class="value">#DDDFE5</div>
+  </div>
+</div>
