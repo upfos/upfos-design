@@ -5,7 +5,7 @@
         <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
       </svg>
     </span>
-    <i v-if="icon" :class="['icon', 'u-button__icon', icon]" :style="{ color: iconColor }" />
+    <u-icon v-if="icon" :class="icon" :color="iconColor"></u-icon>
     <span v-if="slots.default" class="u-button__inner">
       <slot />
     </span>
@@ -14,6 +14,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, reactive } from 'vue'
+import UIcon from '@upfos/icon'
 
 type ButtonTypes = 'primary' | 'secondary' | 'outlined' | 'text'
 type ButtonSize = 'small' | 'medium' | 'large' | 'larger'
@@ -33,6 +34,7 @@ interface ButtonProps {
 
 export default defineComponent({
   name: 'UButton',
+  components: { UIcon },
   props: {
     /** 尺寸 */
     size: {

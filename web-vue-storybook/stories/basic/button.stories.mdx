@@ -3,14 +3,12 @@ import { action } from "@storybook/addon-actions";
 import { reactive } from "vue";
 import UButton from "@web-vue/packages/button/src/index.vue";
 import UButtonGroup from "@web-vue/packages/button/src/button-group.vue";
+import UIcon from '@web-vue/packages/icon/src/index.vue';
 import "@web-vue/packages/theme-chalk/src/index.scss";
 
 <Meta
   title="UPFOS DESIGN/Basic 基础组件/Button 按钮"
   component={UButton}
-  argTypes={{
-    ...argsType
-  }}
 />
 
 <style>{`
@@ -61,13 +59,13 @@ export const Base = (args) => ({
 export const IconTemplate = `
 <u-button type="primary" icon="button_config">设置</u-button>
 <u-button icon="button_print">打印</u-button>
-<u-button>下载<i class="icon button_import icon--right"></i></u-button>
+<u-button>下载<u-icon class="button_import" right></u-icon></u-button>
 <u-button icon="button_delete" icon-color="#D0021C"></u-button>
 <u-button type="text" icon="button_print">打印</u-button>
 `;
 
 export const Icon = (args) => ({
-  components: { UButton },
+  components: { UButton, UIcon },
   props: Object.keys(args),
   template: IconTemplate,
 });
@@ -206,27 +204,6 @@ export const Long = (args) => ({
 
 <!-- ### 参数文档 -->
 
-export const argsType = {
-  size: {
-    table: {
-      type: {
-        summary: "string",
-      }
-    },
-    options: ['small', 'medium', 'large', 'larger'],
-  },
-  type: {
-    table: {
-      type: {
-        summary: "string",
-      },
-    },
-    options: ['primary', 'secondary', 'outlined', 'text'],
-  },
-};
-
-<!--<ArgsTable story="基本用法" /> -->
-
 ###  Button 属性
 
 |属性|说明|类型|可选值|默认值|
@@ -239,7 +216,7 @@ export const argsType = {
 |loading|是否加载中状态|boolean|—|false|
 |long|按钮的宽度是否随容器自适应|boolean|—|false|
 |icon|图标类名|string|—|-|
-|iconColor|图标颜色|string|—|-|
+|icon-color|图标颜色|string|—|-|
 |active|按钮激活状态（仅在按钮组中有效）|boolean|—|false|
 
 ### Button 插槽
