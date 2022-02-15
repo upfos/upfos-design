@@ -1,5 +1,5 @@
 {
-  "name": "@upfos/{{name}}",
+  "name": "@upfos/loading",
   "version": "1.0.0",
   "description": "基于 Vue3.x 的组件库",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",

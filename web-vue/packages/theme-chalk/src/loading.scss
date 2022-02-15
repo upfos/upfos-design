@@ -1,10 +1,10 @@
 @import "./common/var.scss";
 
 .loading-spinner {
-  height: $--font-size--small;
+  // height: $--font-size--small;
   .circular {
-    width: $--font-size--small;
-    height: $--font-size--small;
+    // width: $--font-size--small;
+    // height: $--font-size--small;
     animation: loading-rotate 2s linear infinite;
   }
 

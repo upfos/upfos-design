@@ -1,7 +1,12 @@
 import { App } from 'vue'
+import Icon from '@upfos/icon'
 import Button, { ButtonGroup } from '@upfos/button'
 
-const components = [Button, ButtonGroup];
+const components = [
+  Icon, 
+  Button, 
+  ButtonGroup
+];
 const install = (app: App): void => {
   components.forEach((component) => {
     //注册组件
@@ -10,7 +15,9 @@ const install = (app: App): void => {
 };
 
 export {
-  Button
+  Icon,
+  Button,
+  ButtonGroup
 }
 
 export default install

@@ -1,10 +1,6 @@
 <template>
   <button class="u-button" :class="classNames" @click="handleClick">
-    <span class="loading-spinner" v-if="loading">
-      <svg viewBox="25 25 50 50" class="circular">
-        <circle cx="50" cy="50" r="20" fill="none" class="path"></circle>
-      </svg>
-    </span>
+    <u-loading v-if="loading"></u-loading>
     <u-icon v-if="icon" :class="icon" :color="iconColor"></u-icon>
     <span v-if="slots.default" class="u-button__inner">
       <slot />
@@ -15,6 +11,7 @@
 <script lang="ts">
 import { defineComponent, PropType, reactive } from 'vue'
 import UIcon from '@upfos/icon'
+import ULoading from '@upfos/loading'
 
 type ButtonTypes = 'primary' | 'secondary' | 'outlined' | 'text'
 type ButtonSize = 'small' | 'medium' | 'large' | 'larger'
@@ -34,7 +31,7 @@ interface ButtonProps {
 
 export default defineComponent({
   name: 'UButton',
-  components: { UIcon },
+  components: { UIcon, ULoading },
   props: {
     /** 尺寸 */
     size: {
@@ -96,7 +93,6 @@ export default defineComponent({
       if (props.disabled || props.loading) {
         return false
       }
-      console.log('click')
       emit('click', e)
     }
     return {
