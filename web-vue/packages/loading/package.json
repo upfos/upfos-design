@@ -1,6 +1,6 @@
 {
   "name": "@upfos/loading",
-  "version": "1.0.1-alpha.0",
+  "version": "1.0.1-alpha.1",
   "description": "基于 Vue3.x 的组件库",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
   "license": "ISC",
@@ -35,6 +35,6 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@upfos/theme-chalk": "^0.0.1-alpha.10"
+    "@upfos/theme-chalk": "^0.0.1-alpha.11"
   }
 }
