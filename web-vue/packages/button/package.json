@@ -1,6 +1,6 @@
 {
   "name": "@upfos/button",
-  "version": "0.0.1-alpha.12",
+  "version": "0.0.1-alpha.13",
   "description": "基于 Vue3.x 的组件库",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
@@ -37,8 +37,8 @@
   },
   "gitHead": "9ed1990fd7a0a453c7cd43a9c30d27f53c58a399",
   "dependencies": {
-    "@upfos/icon": "^1.0.0",
-    "@upfos/loading": "^1.0.0",
-    "@upfos/theme-chalk": "^0.0.1-alpha.9"
+    "@upfos/icon": "^1.0.1-alpha.0",
+    "@upfos/loading": "^1.0.1-alpha.0",
+    "@upfos/theme-chalk": "^0.0.1-alpha.10"
   }
 }

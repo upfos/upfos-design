@@ -1,6 +1,6 @@
 {
   "name": "@upfos/icon",
-  "version": "1.0.0",
+  "version": "1.0.1-alpha.0",
   "description": "基于 Vue3.x 的组件库",
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
@@ -36,6 +36,6 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@upfos/theme-chalk": "^0.0.1-alpha.9"
+    "@upfos/theme-chalk": "^0.0.1-alpha.10"
   }
 }
