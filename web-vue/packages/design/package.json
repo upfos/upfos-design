@@ -38,6 +38,7 @@
   "dependencies": {
     "@upfos/button": "^0.0.1-alpha.12",
     "@upfos/icon": "^1.0.0",
+    "@upfos/label": "^1.0.0",
     "@upfos/loading": "^1.0.0",
     "@upfos/theme-chalk": "^0.0.1-alpha.9"
   }
