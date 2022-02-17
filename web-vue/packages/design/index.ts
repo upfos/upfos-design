@@ -1,10 +1,13 @@
 import { App } from 'vue'
-import Icon from '@upfos/icon'
-import Button, { ButtonGroup } from '@upfos/button'
-import Label from '@upfos/label'
+import Icon from '../icon/src/index.vue'
+import Loading from '../loading/src/index.vue'
+import Button from '../button/src/index.vue'
+import ButtonGroup from '../button/src/button-group.vue'
+import Label from '../label/src/index.vue'
 
 const components = [
   Icon, 
+  Loading,
   Button, 
   ButtonGroup,
   Label,
@@ -18,6 +21,7 @@ const install = (app: App): void => {
 
 export {
   Icon,
+  Loading,
   Button,
   ButtonGroup,
   Label

@@ -63,7 +63,7 @@ module.exports = fs
                     name: 'index',
                     file: path.resolve(root, item, pkg.main),
                     format: 'umd',
-                    sourcemap: false,
+                    // sourcemap: false,
                     globals: {
                         vue: 'vue',
                     }
@@ -72,7 +72,7 @@ module.exports = fs
                     name: 'index.module',
                     file: path.join(root, item, pkg.module),
                     format: 'es',
-                    sourcemap: false,
+                    // sourcemap: false,
                     globals: {
                         vue: 'vue',
                     }
@@ -85,6 +85,6 @@ module.exports = fs
                 console.error(`(!) ${warning.message}`)
             },
             plugins: getPlugins(),
-            external: Object.keys(require(path.join(root, item, 'package.json'))?.peerDependencies || {})
+            external: ['vue', '@ctrl/tinycolor']
         }
     })
