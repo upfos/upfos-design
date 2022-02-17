@@ -10,8 +10,8 @@
 
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue'
-import UIcon from '@upfos/icon'
-import ULoading from '@upfos/loading'
+import UIcon from '../../icon/src/index.vue'
+import ULoading from '../../loading/src/index.vue'
 
 type ButtonTypes = 'primary' | 'secondary' | 'outlined' | 'text'
 type ButtonSize = 'small' | 'medium' | 'large' | 'larger'

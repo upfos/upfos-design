@@ -11,7 +11,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from 'vue'
 import { TinyColor } from '@ctrl/tinycolor'
-import UIcon from '@upfos/icon'
+import UIcon from '../../icon/src/index.vue'
 
 type LabelTypes = 'primary' | 'secodary' | 'success' | 'danger' | 'warning'
 type LabelSize = 'small' | 'medium' | 'large' | 'larger'

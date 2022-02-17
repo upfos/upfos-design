@@ -37,7 +37,6 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
-    "@upfos/icon": "^1.0.1-alpha.1",
     "@upfos/theme-chalk": "^0.0.1-alpha.11"
   }
 }
