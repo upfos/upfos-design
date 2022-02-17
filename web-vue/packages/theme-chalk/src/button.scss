@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import "./common/var.scss";
 @import "./mixins/button.scss";
 
@@ -5,17 +6,17 @@
   border-radius: 4px;
   display: inline-flex;
   box-sizing: border-box;
-  font-size: $--font-size--small;
+  font-size: $size-small;
   line-height: 1;
   padding: 8px 16px;
   transition: all ease-in .2s;
   cursor: pointer;
   border: 1px solid;
-  @include button-color($--color--primary-text, $--color--base-border, $--color--base-white);
-  @include button-color-hover($--color--base-border, $--color--base-gray);
+  @include button-color(var(--u-text-color-primary), var(--u-border-color-light), var(--u-color-white));
+  @include button-color-hover(var(--u-border-color-light), var(--u-bg-color-base));
 
   &.is-disabled {
-    @include button-color($--color--secondary-text, $--color--base-border, $--color--light-gray);
+    @include button-color(var(--u-text-color-secondary), var(--u-border-color-light), var(--u-bg-color-base));
   }
 
   &+.u-button {
@@ -63,55 +64,49 @@
   }
 
   &--large {
-    font-size: $--font-size--normal;
+    font-size: $size-normal;
     @include button-size(8px);
   }
 
   &--larger {
-    font-size: $--font-size--normal;
+    font-size: $size-normal;
     @include button-size(10px);
   }
 
   &--primary {
-    @include button-color($--color--base-white, $--color--primary, $--color--primary);
-    @include button-color-hover($--color--primary-hover, $--color--primary-hover);
+    @include button-color(var(--u-color-white), var(--u-color-primary), var(--u-color-primary));
+    @include button-color-hover(var(--u-color-primary-hover), var(--u-color-primary-hover));
 
     &.is-disabled {
-      @include button-color($--color--secondary-text, $--color--base-border, $--color--light-gray);
-    }
-
-    .icon {
-      color: $--color--base-white;
+      @include button-color(var(--u-text-color-secondary), var(--u-border-color-light), var(--u-bg-color-base));
     }
 
     .loading-spinner .circular .path {
-      stroke: $--color--base-white;
+      stroke: var(--u-color-white);
+    }
+  }
+
+  &--secondary {
+    .icon {
+      color: map.get($other-color, 'icon', 'button');
     }
   }
 
   &--outlined {
-    @include button-color($--color--primary, $--color--primary, $--color--base-white);
-    @include button-color-hover($--color--primary, $--color--outline-hover);
+    @include button-color(var(--u-color-primary), var(--u-color-primary), var(--u-color-white));
+    @include button-color-hover(var(--u-color-primary), var(--u-color-outline-hover));
 
     &.is-disabled {
-      @include button-color($--color--primary-hover, $--color--primary-hover, $--color--base-white);
-    }
-
-    .icon {
-      color: $--color--primary;
+      @include button-color(var(--u-color-primary-hover), var(--u-color-primary-hover), var(--u-color-white));
     }
   }
 
   &--text {
-    @include button-color($--color--primary, transparent, transparent);
-    @include button-color-hover(transparent, $--color--light-gray);
+    @include button-color(var(--u-color-primary), transparent, transparent);
+    @include button-color-hover(transparent, var(u--color-light));
 
     &.is-disabled {
-      @include button-color($--color--primary-hover, transparent, transparent);
-    }
-
-    .icon {
-      color: $--color--primary;
+      @include button-color(var(--u-color-primary-hover), transparent, transparent);
     }
   }
 }
@@ -144,21 +139,21 @@
 
     &.is-active,
     &:hover {
-      color: $--color--primary;
-      background-color: $--color--outline-hover;
+      color: var(--u-color-primary);
+      background-color: var(--u-color-outline-hover);
     }
 
     &--primary {
 
       &.is-active,
       &:hover {
-        background-color: $--color--primary-hover;
-        border-color: $--color--primary-hover;
-        color: $--color--base-white;
+        background-color: var(--u-color-primary-hover);
+        border-color: var(--u-color-primary-hover);
+        color: var(--u-color-white);
       }
 
       &+.u-button {
-        border-left: 1px solid $--color--base-white;
+        border-left: 1px solid var(--u-color-white);
       }
     }
   }
@@ -176,7 +171,7 @@
           top: 5px;
           bottom: 5px;
           left: 0;
-          background: $--color--base-white;
+          background: var(--u-color-white);
         }
       }
     }

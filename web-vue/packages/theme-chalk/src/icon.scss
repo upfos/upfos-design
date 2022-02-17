@@ -10,11 +10,18 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1;
-  color: #777777;
 }
 
 .u-icon--right {
   margin-left: 8px;
+}
+
+.design_label_delete:before {
+  content: "\e772";
+}
+
+.overall_input_delete:before {
+  content: "\e773";
 }
 
 .overall_input_confirm:before {
@@ -23,10 +30,6 @@
 
 .overall_input_edit:before {
   content: "\e771";
-}
-
-.overall_input_delect:before {
-  content: "\e772";
 }
 
 .overall_graph_operationlog:before {

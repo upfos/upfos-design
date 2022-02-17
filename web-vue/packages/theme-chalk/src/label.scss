@@ -1,0 +1,53 @@
+@import "./common/var.scss";
+@import "./mixins/label.scss";
+
+.u-label {
+  display: inline-flex;
+  font-size: $size-small;
+  padding: 5px 14px;
+  line-height: 1;
+  border-radius: 2px;
+  color: var(--u-label-color);
+  background-color: var(--u-label-bg-color);
+  border: 1px solid var(--u-label-border-color);
+
+  &+.u-label {
+    margin-left: 10px;
+  }
+  .icon{
+    &+span {
+      margin-left: 5px;
+    }
+  }
+
+  // size
+  &--small {
+    @include label-size(3px);
+  }
+
+  &--medium {
+    @include label-size(5px);
+  }
+
+  &--large {
+    font-size: $size-normal;
+    @include label-size(6px);
+  }
+
+  &--larger {
+    font-size: $size-normal;
+    @include label-size(9px);
+  }
+
+  .u-label_close-btn {
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 6px;
+    padding: 3px;
+    &:hover {
+      color: var(--u-label-hover-color);
+      background-color: var(--u-label-hover-bg-color);
+    }
+  }
+}

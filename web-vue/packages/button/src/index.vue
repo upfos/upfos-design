@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, reactive } from 'vue'
+import { computed, defineComponent, PropType } from 'vue'
 import UIcon from '@upfos/icon'
 import ULoading from '@upfos/loading'
 
@@ -23,7 +23,7 @@ interface ButtonProps {
   circle?: boolean
   disabled?: boolean
   loading?: boolean
-  long?: boolean,
+  long?: boolean
   icon?: string
   iconColor?: string
   active?: boolean
@@ -76,18 +76,22 @@ export default defineComponent({
     active: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props: ButtonProps, { emit, slots }) {
-    const classNames = reactive({
-      [`u-button--${props.type}`]: !!props.type,
-      'is-disabled': props.disabled,
-      'is-circle': props.circle,
-      'is-round': props.round,
-      'is-loading': props.loading,
-      'is-long': props.long,
-      'is-active': props.active,
-      [`u-button--${props.size}`]: !!props.size,
+    const classNames = computed(() => {
+      const { type, disabled, circle, round, loading, long, active, size } =
+        props
+      return {
+        [`u-button--${type}`]: !!type,
+        'is-disabled': disabled,
+        'is-circle': circle,
+        'is-round': round,
+        'is-loading': loading,
+        'is-long': long,
+        'is-active': active,
+        [`u-button--${size}`]: !!props.size,
+      }
     })
     const handleClick = (e: any) => {
       if (props.disabled || props.loading) {

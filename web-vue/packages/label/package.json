@@ -1,0 +1,43 @@
+{
+  "name": "@upfos/label",
+  "version": "1.0.0",
+  "description": "基于 Vue3.x 的组件库",
+  "author": "chrissie <shengjiaoqing@163.com>",
+  "homepage": "https://github.com/upfosdesign/upfos-design#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/index.module.js",
+  "typings": "typings/upfos.d.ts",
+  "files": [
+    "lib",
+    "typings",
+    "README"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upfosdesign/upfos-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/upfosdesign/upfos-design/issues"
+  },
+  "keywords": [
+    "vue3",
+    "components",
+    "lerna",
+    "rollup"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.8"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
+    "@upfos/icon": "^1.0.0",
+    "@upfos/theme-chalk": "^0.0.1-alpha.9"
+  }
+}

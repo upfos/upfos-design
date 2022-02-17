@@ -1,21 +1,68 @@
+@use 'sass:map';
+
 /* Font Size -------------------------- */
-$--font-size--small: 12px !default;
-$--font-size--normal: 14px !default;
+$size-small: 12px !default;
+$size-normal: 14px !default;
 
 /* Main Color -------------------------- */
-$--color--primary: #EF5230 !default;
-$--color--primary-hover: #F3826A !default;
-$--color--outline-hover: #FFF2EF !default;
+$color-white: #FFFFFF !default;
+$color-primary: #EF5230 !default;
+$color-primary-hover: #F3826A !default;
+$color-outline-hover: #FFF2EF !default;
+
 /* Secondary Color -------------------------- */
+$secondary-color: () !default;
+$secondary-color: map.merge(
+  (
+    'secondary': #2A7AFF,
+    'danger': #D10921,
+    'success': #12CE66,
+    'warning': #F27029,
+  ),
+  $secondary-color
+);
 
 /* Neutral Color -------------------------- */
-// Background Color
-$--color--base-black: #2C2C2C !default;
-$--color--base-white: #FFFFFF !default;
-$--color--base-gray: #EDEFF3 !default;
-$--color--light-gray: #F5F7FA !default;
-// Text Color
-$--color--primary-text: #2C2C2C !default;
-$--color--secondary-text: #919398 !default;
-// Border Color
-$--color--base-border: #DDDFE5 !default;
+// Text
+$text-color: () !default;
+$text-color: map.merge(
+  (
+    'primary': #2C2C2C,
+    'regular': #606266,
+    'secondary': #919398,
+    'placeholder': #C1C4CB,
+  ),
+  $text-color
+);
+
+// Border
+$border-color: () !default;
+$border-color: map.merge(
+  (
+    'base': #C0C4CC,
+    'light': #DDDFE6,
+    'lighter': #EBEFF5,
+  ),
+  $border-color
+);
+
+// Background
+$bg-color: () !default;
+$bg-color: map.merge(
+  (
+    'base': #EDEFF3,
+    'light': #F5F7FA,
+  ),
+  $bg-color
+);
+
+/* Other Color -------------------------- */
+$other-color: () !default;
+$other-color: map.merge(
+  (
+    'icon': (
+      'button': #777777
+    )
+  ),
+  $other-color
+);

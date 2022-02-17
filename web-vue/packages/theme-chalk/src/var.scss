@@ -1,0 +1,19 @@
+@use 'sass:map';
+@import "./common/var.scss";
+@import "./mixins/var.scss";
+
+
+:root {
+  --u-color-white: #{$color-white};
+  --u-color-primary: #{$color-primary};
+  --u-color-primary-hover: #{$color-primary-hover};
+  --u-color-outline-hover: #{$color-outline-hover};
+  // --u-color-#{$type}
+  @include set-component-css-var('color', $secondary-color);
+  // --u-text-color-#{$type}
+  @include set-component-css-var('text-color', $text-color);
+  // --u-border-color-#{$type}
+  @include set-component-css-var('border-color', $border-color);
+  // --u-bg-color-#{$type}
+  @include set-component-css-var('bg-color', $bg-color);
+}

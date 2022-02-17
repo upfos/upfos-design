@@ -1,0 +1,5 @@
+@mixin set-component-css-var($name, $variables) {
+  @each $attribute, $value in $variables {
+    --u-#{$name}-#{$attribute}: #{$value};
+  }
+}
