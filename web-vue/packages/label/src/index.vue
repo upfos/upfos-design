@@ -1,10 +1,10 @@
 <template>
   <span class="u-label" :class="classNames" :style="colorStyle" @click="handleClick">
-    <u-icon v-if="icon" :class="icon" :color="iconColor"></u-icon>
+    <u-icon v-if="icon" :icon="icon" :color="iconColor"></u-icon>
     <span v-if="slots.default" class="u-label__inner">
       <slot />
     </span>
-    <u-icon v-if="closable" class="design_label_delete u-label_close-btn" @click="handleClose"></u-icon>
+    <u-icon v-if="closable" icon="design_label_delete" class="u-label_close-btn" @click="handleClose"></u-icon>
   </span>
 </template>
 
@@ -21,6 +21,7 @@ export default defineComponent({
   name: 'ULabel',
   components: { UIcon },
   props: {
+    /** 类型 */
     type: {
       type: String as PropType<LabelTypes>,
       default: 'primary'

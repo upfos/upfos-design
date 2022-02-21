@@ -1,7 +1,7 @@
 <template>
   <button class="u-button" :class="classNames" @click="handleClick">
     <u-loading v-if="loading"></u-loading>
-    <u-icon v-if="icon" :class="icon" :color="iconColor"></u-icon>
+    <u-icon v-if="icon" :icon="icon" :color="iconColor"></u-icon>
     <span v-if="slots.default" class="u-button__inner">
       <slot />
     </span>

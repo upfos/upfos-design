@@ -1,17 +1,10 @@
-import { Meta, Story } from "@storybook/addon-docs";
-
-<Meta title="Quick Start" />
-
-# 快速开始
+## 快速开始
 介绍如何在项目中使用 Upfos Design
-##
-#
 
 ### Install 安装
-#### 使用包管理器
 我们建议您使用包管理器 (NPM, Yarn) 安装 Upfos Design
 
-```shell
+```bash
 # 选择一个你喜欢的包管理器
 
 # NPM
@@ -22,8 +15,9 @@ $ yarn add @upfos/design
 
 ```
 
-### 用法
-#### 完整引入
+### 使用
+完整引入
+
 ```typescript
 // main.ts
 import { createApp } from 'vue'

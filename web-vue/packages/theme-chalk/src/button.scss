@@ -27,7 +27,7 @@
     cursor: not-allowed;
   }
 
-  .icon,
+  .u-icon,
   .loading-spinner {
     &+span {
       margin-left: 8px;
@@ -87,7 +87,7 @@
   }
 
   &--secondary {
-    .icon {
+    .u-icon {
       color: map.get($other-color, 'icon', 'button');
     }
   }

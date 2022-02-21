@@ -1,0 +1,37 @@
+{
+  "name": "@upfos/select",
+  "version": "1.0.0",
+  "description": "基于 Vue3.x 的组件库",
+  "homepage": "https://github.com/upfosdesign/upfos-design#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "module": "lib/index.module.js",
+  "typings": "typings/upfos.d.ts",
+  "files": [
+    "lib",
+    "typings",
+    "README"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upfosdesign/upfos-design.git"
+  },
+  "bugs": {
+    "url": "https://github.com/upfosdesign/upfos-design/issues"
+  },
+  "keywords": [
+    "vue3",
+    "components",
+    "lerna",
+    "rollup"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.8"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

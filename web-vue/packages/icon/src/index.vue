@@ -1,16 +1,19 @@
 <template>
-  <i :class="classNames" :style="style" v-bind="$attrs">
-    <slot></slot>
-  </i>
+  <svg :class="classNames" :style="style" aria-hidden="true" v-bind="$attrs">
+    <use :href="iconName" />
+  </svg>
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, reactive } from 'vue'
+import { defineComponent, computed, reactive, onMounted } from 'vue'
 import type { CSSProperties } from 'vue'
+import './iconfont.js'
 
 export default defineComponent({
   name: 'UIcon',
   props: {
+    /** 图标类名 */
+    icon: String,
     /** 图标颜色 */
     color: String,
     /** 图标是否处于右边 */
@@ -26,17 +29,18 @@ export default defineComponent({
         color: props.color
       }
     })
+    const iconName = computed(() => {
+      return `#${props.icon}`
+    })
     const classNames = reactive({
-      'icon': true,
       'u-icon': true,
       'u-icon--right': props.right
     })
     return {
       style,
-      classNames
+      classNames,
+      iconName
     }
   },
 })
 </script>
-
-

@@ -66,6 +66,7 @@ module.exports = fs
                     // sourcemap: false,
                     globals: {
                         vue: 'vue',
+                        'element-plus': 'element-plus'
                     }
                 },
                 {
@@ -75,6 +76,7 @@ module.exports = fs
                     // sourcemap: false,
                     globals: {
                         vue: 'vue',
+                        'element-plus': 'element-plus'
                     }
                 }
             ],
