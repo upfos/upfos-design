@@ -1,5 +1,6 @@
 {
   "name": "@upfos/theme-chalk",
+  "private": true,
   "version": "0.0.1-alpha.11",
   "main": "lib/index.css",
   "files": [

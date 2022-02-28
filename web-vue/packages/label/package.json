@@ -36,7 +36,6 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@ctrl/tinycolor": "^3.4.0",
-    "@upfos/theme-chalk": "^0.0.1-alpha.11"
+    "@ctrl/tinycolor": "^3.4.0"
   }
 }

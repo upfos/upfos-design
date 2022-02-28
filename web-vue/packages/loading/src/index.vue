@@ -28,4 +28,8 @@ export default defineComponent({
 })
 </script>
 
+<style lang="scss">
+@import "../style/loading.scss";
+</style>
+
 

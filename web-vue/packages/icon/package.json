@@ -34,8 +34,5 @@
   },
   "engines": {
     "node": ">=12"
-  },
-  "dependencies": {
-    "@upfos/theme-chalk": "^0.0.1-alpha.11"
   }
 }

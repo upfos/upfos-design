@@ -87,6 +87,6 @@ module.exports = fs
                 console.error(`(!) ${warning.message}`)
             },
             plugins: getPlugins(),
-            external: ['vue', '@ctrl/tinycolor']
+            external: ['vue']
         }
     })

@@ -1,5 +1,9 @@
-@import "./common/var.scss";
-@import "./mixins/label.scss";
+@import "../../theme-chalk/src/index.scss";
+
+@mixin label-size($--padding) {
+  padding-top: $--padding;
+  padding-bottom: $--padding;
+}
 
 .u-label {
   display: inline-flex;

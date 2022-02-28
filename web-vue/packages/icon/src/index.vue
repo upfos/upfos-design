@@ -44,3 +44,7 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+@import url('../style/icon.scss');
+</style>

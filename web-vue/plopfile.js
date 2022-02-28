@@ -41,6 +41,11 @@ module.exports = plop => {
                 type: 'add',
                 path: 'packages/{{name}}/typings/upfos.d.ts',
                 templateFile: 'templates/typings/upfos.d.ts'
+            },
+            {
+                type: 'add',
+                path: 'packages/{{name}}/style/{{name}}.scss',
+                templateFile: 'templates/style/index.scss'
             }
         ]
     })

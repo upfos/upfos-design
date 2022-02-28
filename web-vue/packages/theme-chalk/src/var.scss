@@ -1,7 +1,5 @@
-@use 'sass:map';
 @import "./common/var.scss";
 @import "./mixins/var.scss";
-
 
 :root {
   --u-color-white: #{$color-white};
