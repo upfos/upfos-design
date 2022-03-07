@@ -9,11 +9,16 @@
 
 ```vue
 <template>
-  <u-button type="primary">主要按钮</u-button>
+  <u-button type="primary" @click="handleClick">主要按钮</u-button>
   <u-button>次级按钮</u-button>
   <u-button type="outlined">辅助按钮</u-button>
   <u-button type="text">文本按钮</u-button>
 </template>
+<script setup lang="ts">
+const handleClick = () => {
+  console.log("触发点击事件!");
+};
+</script>
 ```
 
 :::

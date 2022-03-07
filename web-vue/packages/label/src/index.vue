@@ -48,8 +48,11 @@ export default defineComponent({
     /** 图标颜色 */
     iconColor: String,
   },
+  emits: {
+    click: (evt: MouseEvent) => evt instanceof MouseEvent,
+    close: (evt: MouseEvent) => evt instanceof MouseEvent,
+  },
   setup(props, { emit, slots }) {
-    
     const classNames = computed(() => {
       const { size, closable, effect } = props
       return {

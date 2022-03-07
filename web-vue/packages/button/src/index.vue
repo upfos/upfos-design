@@ -1,7 +1,7 @@
 <template>
   <button class="u-button" :class="classNames" @click="handleClick">
-    <u-loading v-if="loading"></u-loading>
-    <u-icon v-if="icon" :icon="icon" :color="iconColor"></u-icon>
+    <!-- <u-loading v-if="loading"></u-loading>
+    <u-icon v-if="icon" :icon="icon" :color="iconColor"></u-icon> -->
     <span v-if="slots.default" class="u-button__inner">
       <slot />
     </span>
@@ -77,6 +77,9 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+  },
+  emits: {
+    click: (evt: MouseEvent) => evt instanceof MouseEvent,
   },
   setup(props: ButtonProps, { emit, slots }) {
     const classNames = computed(() => {
