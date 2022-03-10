@@ -46,6 +46,18 @@ module.exports = plop => {
                 type: 'add',
                 path: 'packages/{{name}}/style/{{name}}.scss',
                 templateFile: 'templates/style/index.scss'
+            },
+            {
+                type: 'append',
+                path: 'docs/.vuepress/clientAppEnhance.ts',
+                pattern: /(\/\/ -- APPSTART ITEMS HERE --)/gi,
+                template: "import U{{hump name}} from '@upfos/{{name}}'"
+            },
+            {
+                type: 'append',
+                path: 'docs/.vuepress/clientAppEnhance.ts',
+                pattern: /(\/\/ -- APPEND ITEMS HERE --)/gi,
+                template: "app.component('U{{hump name}}', U{{hump name}})"
             }
         ]
     })

@@ -1,4 +1,6 @@
 const alias = require("../../alias");
+const { path } = require('@vuepress/utils')
+
 
 module.exports = {
   title: "UPFOS DESIGN", // 顶部左侧标题
@@ -20,8 +22,9 @@ module.exports = {
           text: "组件",
           children: [
             { text: "Button 按钮", link: "/components/button" },
-            { text: 'Icon 图标', link: '/components/icon'},
+            { text: "Icon 图标", link: "/components/icon" },
             { text: "Label 按钮", link: "/components/label" },
+            { text: "Pagination 分页", link: "/components/pagination" },
           ],
         },
       ],
@@ -36,5 +39,14 @@ module.exports = {
     //   }
     // ],
   },
-  plugins: ["demoblock-plus"],
+  // plugins: ["demoblock-plus"],
+  plugins: [
+    [
+      "@vuepress/plugin-register-components",
+      {
+        componentsDir: path.resolve(__dirname, "./components"),
+      },
+    ],
+    "demoblock-plus"
+  ],
 };

@@ -61,7 +61,8 @@ $other-color: () !default;
 $other-color: map.merge(
   (
     'icon': (
-      'button': #777777
+      'button': #777777,
+      'pagination': #A0AFC8
     )
   ),
   $other-color
