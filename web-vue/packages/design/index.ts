@@ -5,6 +5,8 @@ import Button from '../button/src/index.vue'
 import ButtonGroup from '../button/src/button-group.vue'
 import Label from '../label/src/index.vue'
 
+
+
 const components = [
   Loading,
   Icon, 
