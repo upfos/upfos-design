@@ -8,7 +8,7 @@ import Pagination from '../pagination/src/index.vue'
 
 const components = [
   Loading,
-  Icon, 
+  Icon,
   Button, 
   ButtonGroup,
   Label,

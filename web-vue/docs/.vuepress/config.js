@@ -39,14 +39,5 @@ module.exports = {
     //   }
     // ],
   },
-  // plugins: ["demoblock-plus"],
-  plugins: [
-    [
-      "@vuepress/plugin-register-components",
-      {
-        componentsDir: path.resolve(__dirname, "./components"),
-      },
-    ],
-    "demoblock-plus"
-  ],
+  plugins: ["demoblock-plus"]
 };

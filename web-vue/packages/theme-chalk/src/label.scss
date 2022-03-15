@@ -1,7 +1,5 @@
-@mixin label-size($--padding) {
-  padding-top: $--padding;
-  padding-bottom: $--padding;
-}
+@import './var.scss';
+@import './mixins/label.scss';
 
 .u-label {
   display: inline-flex;

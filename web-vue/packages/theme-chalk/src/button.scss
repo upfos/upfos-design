@@ -1,25 +1,6 @@
 @use 'sass:map';
-
-@mixin button-color($--color, $--border-color, $--background-color) {
-  color: $--color;
-  border-color: $--border-color;
-  background-color: $--background-color;
-}
-
-@mixin button-color-hover($--border-color, $--background-color) {
-  &:hover {
-    border-color: $--border-color;
-    background-color: $--background-color;
-  }
-}
-
-@mixin button-size($--padding) {
-  padding-top: $--padding;
-  padding-bottom: $--padding;
-  &.is-circle {
-    padding: $--padding;
-  }
-}
+@import './var.scss';
+@import "./mixins/button.scss";
 
 .u-button {
   border-radius: 4px;
