@@ -110,7 +110,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-@import '../style/button.scss';
-</style>

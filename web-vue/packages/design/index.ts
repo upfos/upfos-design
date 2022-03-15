@@ -4,8 +4,7 @@ import Icon from '../icon/src/index.vue'
 import Button from '../button/src/index.vue'
 import ButtonGroup from '../button/src/button-group.vue'
 import Label from '../label/src/index.vue'
-
-
+import Pagination from '../pagination/src/index.vue'
 
 const components = [
   Loading,
@@ -13,6 +12,7 @@ const components = [
   Button, 
   ButtonGroup,
   Label,
+  Pagination,
 ];
 const install = (app: App): void => {
   components.forEach((component) => {
@@ -26,7 +26,8 @@ export {
   Icon,
   Button,
   ButtonGroup,
-  Label
+  Label,
+  Pagination,
 }
 
 export default install

@@ -12,7 +12,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-@import "../style/{{name}}.scss";
-</style>

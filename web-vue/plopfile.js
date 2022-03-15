@@ -43,11 +43,6 @@ module.exports = plop => {
                 templateFile: 'templates/typings/upfos.d.ts'
             },
             {
-                type: 'add',
-                path: 'packages/{{name}}/style/{{name}}.scss',
-                templateFile: 'templates/style/index.scss'
-            },
-            {
                 type: 'append',
                 path: 'docs/.vuepress/clientAppEnhance.ts',
                 pattern: /(\/\/ -- APPSTART ITEMS HERE --)/gi,

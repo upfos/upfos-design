@@ -1,5 +1,4 @@
 @use 'sass:map';
-@import "../../theme-chalk/src/index.scss";
 
 @mixin button-color($--color, $--border-color, $--background-color) {
   color: $--color;

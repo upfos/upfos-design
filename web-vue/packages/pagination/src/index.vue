@@ -1,6 +1,6 @@
 <template>
   <div class="u-pagination">
-    <el-select class="page-select" v-model="pageSize" size="small" popper-class="page-select__popper" @change="handleSizeChange">
+    <el-select class="page-select" v-model="pageSizeBrige" size="small" popper-class="page-select__popper" @change="handleSizeChange">
       <el-option v-for="item in pageSizes" :key="item" :label="item" :value="item">
       </el-option>
     </el-select>
@@ -42,7 +42,7 @@ export default defineComponent({
     },
     pageSize: {
       type: Number,
-      default: 0,
+      default: 10,
     },
     total: {
       type: Number,
@@ -54,19 +54,20 @@ export default defineComponent({
     },
   },
   emits: {
-    'onUpdate:current-page': (val: number) => typeof val === 'number',
-    'onUpdate:page-size': (val: number) => typeof val === 'number',
+    'update:current-page': (val: number) => typeof val === 'number',
+    'update:page-size': (val: number) => typeof val === 'number',
     'size-change': (val: number) => typeof val === 'number',
     'current-change': (val: number) => typeof val === 'number',
-    refreshTotal: (evt: MouseEvent) => evt instanceof MouseEvent,
+    'refresh-total': (evt: MouseEvent) => evt instanceof MouseEvent,
   },
   setup(props, { emit, slots }) {
     const nowPage = ref(1)
 
-    // const pageSizeBrige = ref(1)
-
-    const pageSizeBrige = computed(() => {
-      return props.pageSize
+    const pageSizeBrige = computed({
+      get: () => props.pageSize,
+      set: val => {
+        emit('update:page-size', val)
+      }
     })
 
     const totalPage = computed(() => {
@@ -80,21 +81,21 @@ export default defineComponent({
     }
     // 刷新总条数
     const refreshTotal = (e) => {
-      emit('refreshTotal', e)
+      emit('refresh-total', e)
     }
 
     // 每页条数发生变化
     const handleSizeChange = (val: number) => {
       nowPage.value = getValidPage()
-      emit('update:page-size', val)
+      emit('update:page-size', val) 
       emit('size-change', val)
     }
 
     // 页数跳转
     const goToPage = (page: number) => {
       nowPage.value = page
-      emit('update:currentPage', page)
-      emit('currentChange', page)
+      emit('update:current-page', page)
+      emit('current-change', page)
     }
 
     // 跳转到 N 页
@@ -146,7 +147,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-@import '../style/pagination.scss';
-</style>

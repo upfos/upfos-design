@@ -1,6 +1,5 @@
 {
   "name": "@upfos/pagination",
-  "private": true,
   "version": "1.0.1-alpha.0",
   "description": "基于 Vue3.x 的组件库",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
