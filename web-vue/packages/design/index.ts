@@ -14,6 +14,7 @@ const components = [
   Label,
   Pagination,
 ];
+
 const install = (app: App): void => {
   if ((install as any).installed) return;
   (install as any).installed = true;
@@ -28,17 +29,18 @@ if (typeof window !== "undefined" && (window as any).Vue) {
   install((window as any).Vue);
 }
 
-export default {
+// export default {
+//   install,
+// };
+
+export {
   install,
-};
+  Loading,
+  Icon,
+  Button,
+  ButtonGroup,
+  Label,
+  Pagination,
+}
 
-// export {
-//   Loading,
-//   Icon,
-//   Button,
-//   ButtonGroup,
-//   Label,
-//   Pagination,
-// }
-
-// export default install
+export default install
