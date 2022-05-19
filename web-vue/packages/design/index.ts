@@ -10,25 +10,36 @@ import Pagination from '../pagination/src/index.vue'
 const components = [
   Loading,
   Icon,
-  Button, 
+  Button,
   ButtonGroup,
   Label,
   Pagination,
 ];
 const install = (app: App): void => {
+  if ((install as any).installed) return;
+  (install as any).installed = true;
   components.forEach((component) => {
     // 注册组件
     app.component(component.name, component);
   });
 };
 
-export {
-  Loading,
-  Icon,
-  Button,
-  ButtonGroup,
-  Label,
-  Pagination,
+// 支持使用标签的方式引入Vue全局变量时，自动install
+if (typeof window !== "undefined" && (window as any).Vue) {
+  install((window as any).Vue);
 }
 
-export default install
+export default {
+  install,
+};
+
+// export {
+//   Loading,
+//   Icon,
+//   Button,
+//   ButtonGroup,
+//   Label,
+//   Pagination,
+// }
+
+// export default install
