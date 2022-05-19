@@ -6,7 +6,6 @@ import ButtonGroup from '../button/src/button-group.vue'
 import Label from '../label/src/index.vue'
 import Pagination from '../pagination/src/index.vue'
 
-
 const components = [
   Loading,
   Icon,
