@@ -16,8 +16,6 @@ const components = [
 ];
 
 const install = (app: App): void => {
-  if ((install as any).installed) return;
-  (install as any).installed = true;
   components.forEach((component) => {
     // 注册组件
     app.component(component.name, component);
