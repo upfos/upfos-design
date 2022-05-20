@@ -23,16 +23,16 @@ const install = (app: App): void => {
 };
 
 // 支持使用标签的方式引入Vue全局变量时，自动install
-if (typeof window !== "undefined" && (window as any).Vue) {
-  install((window as any).Vue);
-}
+// if (typeof window !== "undefined" && (window as any).Vue) {
+//   install((window as any).Vue);
+// }
 
 // export default {
 //   install,
 // };
 
 export {
-  install,
+  // install,
   Loading,
   Icon,
   Button,
