@@ -9,8 +9,8 @@
 node_modules
 /dist
 /deploy
-lib
-packages/**/lib
+# lib
+# packages/**/lib
 
 # local env files
 .env.local
