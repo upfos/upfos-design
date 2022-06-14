@@ -1,6 +1,6 @@
 <template>
   <div class="u-pagination">
-    <el-select class="page-select" v-model="pageSizeBrige" size="small" popper-class="page-select__popper" @change="handleSizeChange">
+    <el-select class="page-select" v-model="pageSizeBridge" size="small" popper-class="page-select__popper" @change="handleSizeChange">
       <el-option v-for="item in pageSizes" :key="item" :label="item" :value="item">
       </el-option>
     </el-select>
@@ -23,14 +23,15 @@
       <span>条</span>
       <span class="total__inner">{{ totalPage }}</span>
       <span>页</span>
-      <u-icon icon="paging_refresh_normal" @click="refreshTotal"></u-icon>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from 'vue'
+import { computed, defineComponent, PropType } from 'vue'
 import { ElSelect, ElOption } from 'element-plus'
+
+type PageSizes = number[]
 
 export default defineComponent({
   name: 'UPagination',
@@ -38,7 +39,7 @@ export default defineComponent({
   props: {
     currentPage: {
       type: Number,
-      defualt: 1,
+      default: 1,
     },
     pageSize: {
       type: Number,
@@ -49,7 +50,7 @@ export default defineComponent({
       default: 0,
     },
     pageSizes: {
-      type: Array,
+      type: Array as PropType<PageSizes>,
       default: () => [10, 20, 50, 100],
     },
   },
@@ -58,12 +59,16 @@ export default defineComponent({
     'update:page-size': (val: number) => typeof val === 'number',
     'size-change': (val: number) => typeof val === 'number',
     'current-change': (val: number) => typeof val === 'number',
-    'refresh-total': (evt: MouseEvent) => evt instanceof MouseEvent,
   },
   setup(props, { emit, slots }) {
-    const nowPage = ref(1)
+    const nowPage = computed({
+      get:() => props.currentPage,
+      set: val => {
+        emit('update:current-page', val)
+      }
+    })
 
-    const pageSizeBrige = computed({
+    const pageSizeBridge = computed({
       get: () => props.pageSize,
       set: val => {
         emit('update:page-size', val)
@@ -79,15 +84,11 @@ export default defineComponent({
     const getValidPage = () => {
       return Math.min(totalPage.value, nowPage.value)
     }
-    // 刷新总条数
-    const refreshTotal = (e) => {
-      emit('refresh-total', e)
-    }
 
     // 每页条数发生变化
     const handleSizeChange = (val: number) => {
-      nowPage.value = getValidPage()
-      emit('update:page-size', val) 
+      nowPage.value = 1
+      emit('update:page-size', val)
       emit('size-change', val)
     }
 
@@ -135,14 +136,13 @@ export default defineComponent({
     return {
       nowPage,
       totalPage,
-      pageSizeBrige,
+      pageSizeBridge,
       handleSizeChange,
       goToStart,
       goToPrevious,
       jumpPage,
       goToNext,
       goToEnd,
-      refreshTotal,
     }
   },
 })
