@@ -4,11 +4,11 @@
   "description": "基于 Vue3.x 的组件库",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
   "license": "ISC",
-  "main": "lib/index.js",
-  "module": "lib/index.module.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
   "typings": "typings/upfos.d.ts",
   "files": [
-    "lib",
+    "dist",
     "typings",
     "README"
   ],
@@ -29,7 +29,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "vue": "^3.2.8"
+    "vue": "^3.2.8",
+    "element-plus": "^2.0.2"
   },
   "engines": {
     "node": ">=12"

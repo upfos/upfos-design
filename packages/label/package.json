@@ -5,11 +5,11 @@
   "author": "chrissie <shengjiaoqing@163.com>",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
   "license": "ISC",
-  "main": "lib/index.js",
-  "module": "lib/index.module.js",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
   "typings": "typings/upfos.d.ts",
   "files": [
-    "lib",
+    "dist",
     "typings",
     "README"
   ],

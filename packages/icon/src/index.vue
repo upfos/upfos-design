@@ -7,7 +7,6 @@
 <script lang="ts">
 import { defineComponent, computed, reactive, onMounted } from 'vue'
 import type { CSSProperties } from 'vue'
-import './iconfont.js'
 
 export default defineComponent({
   name: 'UIcon',

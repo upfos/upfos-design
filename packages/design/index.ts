@@ -1,44 +1,18 @@
-import { App } from 'vue'
-import Loading from '../loading/src/index.vue'
-import Icon from '../icon/src/index.vue'
-import Button from '../button/src/index.vue'
-import ButtonGroup from '../button/src/button-group.vue'
-import Label from '../label/src/index.vue'
-import Pagination from '../pagination/src/index.vue'
+import type { App } from 'vue'
 
-const components = [
-  Loading,
-  Icon,
-  Button,
-  ButtonGroup,
-  Label,
-  Pagination,
-];
+import * as components from './components'
+export * from './components'
 
-const install = (app: App): void => {
-  components.forEach((component) => {
-    // 注册组件
-    app.component(component.name, component);
-  });
-};
-
-// 支持使用标签的方式引入Vue全局变量时，自动install
-// if (typeof window !== "undefined" && (window as any).Vue) {
-//   install((window as any).Vue);
-// }
-
-// export default {
-//   install,
-// };
-
-export {
-  // install,
-  Loading,
-  Icon,
-  Button,
-  ButtonGroup,
-  Label,
-  Pagination,
+export const install = function (app: App) {
+  Object.keys(components).forEach(key => {
+    const component = components[key]
+    if (component.install) {
+      app.use(component)
+    }
+  })
+  return app
 }
 
-export default install
+export default {
+  install
+}

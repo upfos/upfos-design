@@ -7,10 +7,9 @@
 .cache
 .DS_Store
 node_modules
-/dist
 /deploy
-lib
-packages/**/lib
+dist
+packages/**/dist
 
 # local env files
 .env.local

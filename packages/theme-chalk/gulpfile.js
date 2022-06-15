@@ -10,14 +10,14 @@ function compile() { // 处理scss文件
     .pipe(sass.sync())
     .pipe(autoprefixer({}))
     .pipe(cssmin())
-    .pipe(dest('./lib'))
+    .pipe(dest('./dist'))
 }
 function copyfont(){ // 拷贝字体样式
-    return src('./src/fonts/**').pipe(cssmin()).pipe(dest('./lib/fonts'))
+    return src('./src/fonts/**').pipe(cssmin()).pipe(dest('./dist/fonts')).pipe(dest('../design/dist/fonts'))
 }
 
 function copystyle() { // 拷贝index样式到design
-    return src('./lib/index.css').pipe(dest('../design/lib'))
+    return src('./dist/index.css').pipe(dest('../design/dist'))
 }
 
 exports.build = series(compile,copyfont,copystyle)

@@ -22,7 +22,7 @@ $ yarn add @upfos/design
 // main.ts
 import { createApp } from 'vue'
 import UpfosUI from '@upfos/design'
-import '@upfos/theme-chalk/lib/index.css'
+import '@upfos/theme-chalk/dist/index.css'
 import App from './App.vue'
 
 const app = createApp(App)

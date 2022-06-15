@@ -1,9 +1,9 @@
 {
   "name": "@upfos/theme-chalk",
   "version": "0.0.1-alpha.17",
-  "main": "lib/index.css",
+  "main": "dist/index.css",
   "files": [
-    "lib"
+    "dist"
   ],
   "repository": {
     "type": "git",

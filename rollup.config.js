@@ -63,10 +63,11 @@ module.exports = fs
                     name: 'index',
                     file: path.resolve(root, item, pkg.main),
                     format: 'umd',
+                    name: 'UpfosDesign',
                     // sourcemap: false,
                     globals: {
-                        vue: 'vue',
-                        'element-plus': 'element-plus'
+                        vue: 'Vue',
+                        'element-plus': 'ElementPlus'
                     }
                 },
                 {
@@ -75,8 +76,8 @@ module.exports = fs
                     format: 'es',
                     // sourcemap: false,
                     globals: {
-                        vue: 'vue',
-                        'element-plus': 'element-plus'
+                        vue: 'Vue',
+                        'element-plus': 'ElementPlus'
                     }
                 }
             ],
@@ -87,6 +88,6 @@ module.exports = fs
                 console.error(`(!) ${warning.message}`)
             },
             plugins: getPlugins(),
-            external: ['vue', 'element-plus']
+            external: Object.keys(require(path.join(root, item, 'package.json'))?.peerDependencies || {})
         }
     })

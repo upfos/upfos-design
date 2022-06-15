@@ -68,11 +68,11 @@
     "vuepress-vite": "^2.0.0-beta.25"
   },
   "scripts": {
-    "build": "yarn clean:lib && NODE_ENV=production rollup -c && yarn build:theme",
+    "build": "yarn clean:dist && NODE_ENV=production rollup -c && yarn build:theme",
     "build:theme": "yarn clean:theme && gulp build --gulpfile packages/theme-chalk/gulpfile.js",
     "clean": "lerna clean",
-    "clean:lib": "rm -rf ./packages/**/lib",
-    "clean:theme": "rm -rf ./packages/theme-chalk/lib",
+    "clean:dist": "rm -rf ./packages/**/dist",
+    "clean:theme": "rm -rf ./packages/theme-chalk/dist",
     "release": "standard-version",
     "deploy": "yarn build && lerna publish",
     "plop": "plop",

@@ -1,6 +1,7 @@
 import { defineClientAppEnhance } from "@vuepress/client";
 import 'element-plus/theme-chalk/src/index.scss'
 import '../../packages/theme-chalk/src/index.scss'
+import '../../packages/theme-chalk/src/fonts/iconfont.js'
 // -- APPSTART ITEMS HERE --
 import UIcon from "@upfos/icon";
 import ULoading from "@upfos/loading";
