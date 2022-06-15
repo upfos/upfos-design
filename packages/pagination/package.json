@@ -1,6 +1,6 @@
 {
   "name": "@upfos/pagination",
-  "version": "1.0.1-alpha.3",
+  "version": "2.0.0-alpha.0",
   "description": "基于 Vue3.x 的组件库",
   "homepage": "https://github.com/upfosdesign/upfos-design#readme",
   "license": "ISC",
@@ -29,8 +29,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "vue": "^3.2.8",
-    "element-plus": "^2.0.2"
+    "element-plus": "^2.0.2",
+    "vue": "^3.2.8"
   },
   "engines": {
     "node": ">=12"
