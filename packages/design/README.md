@@ -6,23 +6,20 @@
 npm i @upfos/design
 # or
 yarn add @upfos/design
+# or
+pnpm add @upfos/design
 ```
 
 ## Usage
 
 ```vue
 <template>
- <u-design/>
+ <u-button type="primary">Primary button</u-button>
+ <u-label>Label</u-label>
 </template>
 
-<script lang="ts">
-import { defineComponent, toRefs } from 'vue'
-import UDesign from '@upfos/design'
-
-export default defineComponent({
-  components: { UDesign },
-  setup() {}
-})
+<script setup lang="ts">
+import { UButton, ULabel } from '@upfos/design'
 </script>
 ```
 

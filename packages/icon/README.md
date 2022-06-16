@@ -6,23 +6,19 @@
 npm i @upfos/icon
 # or
 yarn add @upfos/icon
+# or
+pnpm add @upfos/icon
 ```
 
 ## Usage
 
 ```vue
 <template>
- <u-icon/>
+ <u-icon icon="settings"></u-icon>
 </template>
 
-<script lang="ts">
-import { defineComponent, toRefs } from 'vue'
+<script setup lang="ts">
 import UIcon from '@upfos/icon'
-
-export default defineComponent({
-  components: { UIcon },
-  setup() {}
-})
 </script>
 ```
 

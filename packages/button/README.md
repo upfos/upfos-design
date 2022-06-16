@@ -6,26 +6,24 @@
 npm i @upfos/button
 # or
 yarn add @upfos/button
+# or
+pnpm add @upfos/button
 ```
 
 ## Usage
 
 ```vue
 <template>
-  <u-button/>
+  <u-button type="primary">Primary button</u-button>
   <u-button-group>
-    <u-button/>
+    <u-button active>组合按钮</u-button>
+    <u-button>组合按钮</u-button>
+    <u-button>组合按钮</u-button>
   </u-button-group>
 </template>
 
-<script lang="ts">
-import { defineComponent, toRefs } from 'vue'
+<script setup lang="ts">
 import UButton, { UButtonGroup as ButtonGroup } from '@upfos/button'
-
-export default defineComponent({
-  components: { UButton, UButtonGroup },
-  setup() {}
-})
 </script>
 ```
 

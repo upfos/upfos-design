@@ -6,23 +6,19 @@
 npm i @upfos/{{name}}
 # or
 yarn add @upfos/{{name}}
+# or
+pnpm add @upfos/{{name}}
 ```
 
 ## Usage
 
 ```vue
 <template>
- <u-{{name}}/>
+ <u-{{name}}></u-{{name}}>
 </template>
 
-<script lang="ts">
-import { defineComponent, toRefs } from 'vue'
+<script setup lang="ts">
 import U{{hump name}} from '@upfos/{{name}}'
-
-export default defineComponent({
-  components: { U{{hump name}} },
-  setup() {}
-})
 </script>
 ```
 
